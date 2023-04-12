@@ -1,0 +1,5 @@
+image path_builder_background = "screens/path_builder/images/path_builder_background.webp"
+image path_builder_box_background = "screens/path_builder/images/path_builder_box_background.webp"
+image path_builder_button_idle = "screens/path_builder/images/button_idle.webp"
+image path_builder_button_idle_dark = "screens/path_builder/images/button_idle_dark.webp"
+image path_builder_button_hover = "screens/path_builder/images/button_hover.webp"
