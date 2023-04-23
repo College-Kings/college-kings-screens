@@ -15,25 +15,12 @@ screen main_menu():
     default image_path = "gui/main_menu/"
 
 
-    add image_path + "background.webp"
+    add "main_menu_background"
 
     if not is_patreon():
         vbox:
             pos (50, 25)
             spacing 25
-
-            # College Kings Next Episodes
-            if not has_ep2():
-                imagebutton:
-                    idle image_path + "ck_episode_2.png"
-                    hover Transform(image_path + "ck_episode_2.png", matrixcolor=BrightnessMatrix(0.2))
-                    action OpenURL("steam://openurl/https://store.steampowered.com/app/2100540/College_Kings_2__Episode_2_The_Pool_Party/")
-
-            elif not has_ep3():
-                imagebutton:
-                    idle image_path + "ck_episode_3.png"
-                    hover Transform(image_path + "ck_episode_3.png", matrixcolor=BrightnessMatrix(0.2))
-                    action OpenURL("steam://openurl/https://store.steampowered.com/app/2267960/College_Kings_2__Episode_3_Back_To_Basics/")
 
             # Unscripted
             imagebutton:
@@ -43,15 +30,14 @@ screen main_menu():
 
     else:
         imagebutton:
-            idle image_path + "patreon_idle.webp"
-            hover Transform(image_path + "patreon_hover.webp", xpos=-28)
+            idle "main_menu_patreon_idle"
+            hover "main_menu_patreon_hover"
             action OpenURL("https://www.patreon.com/collegekings")
-            pos (118, 36)
 
     # Discord
     imagebutton:
-        idle image_path + "discord_idle.png"
-        hover image_path + "discord_hover.png"
+        idle "main_menu_discord_idle"
+        hover "main_menu_discord_hover"
         action OpenURL("https://discord.gg/collegekings")
         xalign 1.0
         xoffset -25
@@ -86,7 +72,7 @@ screen main_menu():
     imagebutton:
         idle image_path + "load_idle.webp"
         hover Transform(image_path + "load_hover.webp", pos=(-27, -31))
-        action [ShowMenu("load"), Function(change_save_location, "CollegeKings2")]
+        action ShowMenu("load")
         pos (1096, 880)
 
     hbox:
@@ -128,61 +114,8 @@ screen main_menu():
 
     on "show" action [Play("music", audio.music.ck2_main_menu_theme_start), Queue("music", audio.music.ck2_main_menu_theme_loop, loop=True)]
 
-    if has_ep3() and not has_ep2():
-        on "show" action Show("ep3_warning")
-
     if not config_debug and not what_new_content == persistent.previous_whats_new:
         on "show" action Show("whats_new")
 
     if config_debug:
         timer 0.1 action Start()
-
-screen ep3_warning():
-    zorder 200
-    modal True
-    style_prefix "warning"
-
-    add "darker_80"
-
-    frame:
-        align (0.5, 0.5)
-        yoffset -42
-        minimum (758, 363)
-        background "warning_background_blue"
-
-        vbox:
-            align (0.5, 0.5)
-            spacing 45
-
-            null height 50
-
-            vbox:
-                xalign 0.5
-                xsize 650
-                spacing 15
-
-                text _("Warning: You're missing essential content.") size 64 xalign 0.5 text_align 0.5
-                text _("It seems that you have installed \"College Kings 2: Episode 3 - Back To Basics\" without owning \"College Kings 2: Episode 2 - The Pool Party\".")
-                text _("College Kings 2 is an episodic game, where each episode builds on the previous one. Whilst you are able to play Episode 3 via the path builder, you may experience bugs, glitches and other issues and saves are unlikely to work at all. To get the most out of Episode 3 and experience the story in full, we therefore highly recommend you install and play Episode 2 before jumping into Episode 3.")
-
-            hbox:
-                xalign 0.5
-                spacing 35
-
-                button:
-                    idle_background "blue_button_idle"
-                    hover_background "blue_button_hover"
-                    action Hide("ep3_warning")
-                    padding (30, 20)
-
-                    text _("Continue at my own risk") size 32
-
-                button:
-                    idle_background "blue_button_idle"
-                    hover_background "blue_button_hover"
-                    action OpenURL("steam://openurl/https://store.steampowered.com/app/2100540/College_Kings_2__Episode_2_The_Pool_Party/")
-                    padding (30, 20)
-
-                    text _("Buy Episode 2 Now") size 32
-
-            null height 50
