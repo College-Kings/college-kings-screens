@@ -26,7 +26,7 @@ class SceneGallery:
             self.scope: dict[str, Any] = scope
 
     @classmethod
-    def create_gallery(cls):
+    def create_gallery(cls) -> None:
         cls.items = []
 
         cls.items.append(
