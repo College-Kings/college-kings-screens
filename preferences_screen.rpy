@@ -101,7 +101,7 @@ screen preferences():
                         idle_background "blue_button_idle"
                         hover_background "blue_button_hover"
                         selected_background "blue_button_hover"
-                        action SetVariable("config_censored", True)
+                        action SetVariable("is_censored", True)
                         xysize (137, 61)
 
                         text "On" align (0.5, 0.5)
@@ -110,7 +110,7 @@ screen preferences():
                         idle_background "blue_button_idle"
                         hover_background "blue_button_hover"
                         selected_background "blue_button_hover"
-                        action SetVariable("config_censored", False)
+                        action SetVariable("is_censored", False)
                         xysize (137, 61)
 
                         text "Off" align (0.5, 0.5)
