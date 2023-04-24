@@ -45,7 +45,7 @@ screen scene_gallery():
             mousewheel True
             allow_underfull True
             
-            for gallery_item in SceneGallery.items:
+            for gallery_item in scene_gallery_items:
                 frame:
                     xysize (374, 300)
 
