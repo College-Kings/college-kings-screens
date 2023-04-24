@@ -47,7 +47,7 @@ screen choice(items, seconds=3, fail_label=None):
         $ item = renpy.random.choice(items)
         timer 0.1 action item.action
 
-    on "show" action [Hide("phone_icon"), If("reputation_tutorial" not in persistent.hidden_tutorials, Show("reputation_tutorial"))]
+    on "show" action [Hide("phone_icon"), If(persistent.enabled_tutorials["reputation_tutorial"], Show("reputation_tutorial"))]
     on "hide" action Show("phone_icon")
     on "replace" action Hide("phone_icon")
     on "replaced" action Show("phone_icon")

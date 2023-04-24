@@ -187,8 +187,8 @@ screen preferences():
                         idle_background "blue_button_idle"
                         hover_background "blue_button_hover"
                         selected_background "blue_button_hover"
-                        action Function(set_dict_values, persistent.hidden_tutorials, False)
-                        selected not all(persistent.hidden_tutorials.values())
+                        action Function(set_dict_values, persistent.enabled_tutorials, True)
+                        selected all(persistent.enabled_tutorials.values())
                         xysize (137, 61)
 
                         text "On" align (0.5, 0.5)
@@ -197,8 +197,8 @@ screen preferences():
                         idle_background "blue_button_idle"
                         hover_background "blue_button_hover"
                         selected_background "blue_button_hover"
-                        action Function(set_dict_values, persistent.hidden_tutorials, True)
-                        selected all(persistent.hidden_tutorials.values())
+                        action Function(set_dict_values, persistent.enabled_tutorials, False)
+                        selected not all(persistent.enabled_tutorials.values())
                         xysize (137, 61)
 
                         text "Off" align (0.5, 0.5)
