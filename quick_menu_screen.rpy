@@ -57,9 +57,6 @@ screen quick_menu():
                 hover Transform(image_path + "settings_hover.webp", zoom=0.35)
                 action ShowMenu("preferences")
 
-    if config_debug:
-        timer 0.01 repeat True action SetField(config, "skipping", "slow")
-
 
 style quick_menu_button:
     align (0.5, 0.5)
