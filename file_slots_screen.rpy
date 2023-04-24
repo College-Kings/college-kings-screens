@@ -25,8 +25,8 @@ screen file_slots(title):
         style "file_slots_title"
 
     imagebutton:
-        idle "gui/common/return_idle.webp"
-        hover "gui/common/return_hover.webp"
+        idle "return_button_idle"
+        hover "return_button_hover"
         action Return()
 
     fixed:
@@ -56,6 +56,7 @@ screen file_slots(title):
             for slot in range(1, grid_cols * grid_rows + 1):
                 python:
                     game_version = FileJson(slot, key="_version") or ""
+                    game_version = '.'.join(str(i) for i in game_version)
                     renpy_version = FileJson(slot, key="_renpy_version") or ""
                     renpy_version = '.'.join(str(i) for i in renpy_version)
                     is_file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
