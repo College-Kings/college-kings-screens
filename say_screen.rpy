@@ -38,6 +38,8 @@ screen say(who, what):
     if not renpy.variant("small"):
         add SideImage() yalign 1.0
 
+    if config_debug:
+        timer 0.2 repeat True action SetField(config, "skipping", "slow")
 
 style say_window is window:
     xalign 0.5
