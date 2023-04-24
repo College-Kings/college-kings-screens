@@ -17,7 +17,7 @@ screen path_builder_girls():
         (ms_rose, Frat.WOLVES, Reputations.CONFIDENT, (Relationship.FRIEND, Relationship.FWB)),
         (naomi, None, Reputations.POPULAR, (Relationship.FRIEND, Relationship.FWB)),
         (nora, None, Reputations.CONFIDENT, (Relationship.EX, Relationship.FRIEND, Relationship.FWB, Relationship.GIRLFRIEND)),
-        (penelope, None, Reputations.CONFIDENT, (Relationship.EX, Relationship.FRIEND, Relationship.GIRLFRIEND)),
+        (penelope, None, Reputations.CONFIDENT, (Relationship.EX, Relationship.FRIEND, Relationship.DATING, Relationship.GIRLFRIEND)),
         (riley, None, Reputations.CONFIDENT, (Relationship.FRIEND, Relationship.FWB)),
         (samantha, Frat.APES, Reputations.LOYAL, (Relationship.FRIEND, Relationship.FWB)),
     )
