@@ -11,7 +11,7 @@ screen preferences():
 
     default image_path = "gui/settings/"
 
-    add image_path + "background.png"
+    add "settings_background"
 
     imagebutton:
         idle "return_button_idle"
