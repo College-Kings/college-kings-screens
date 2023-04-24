@@ -83,8 +83,6 @@ style scene_gallery_text is bebas_neue_30:
 label scene_gallery_name_change:
     scene black
 
-    $ SceneGallery.create_gallery()
-
     if not persistent.name.strip():
         $ persistent.name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
 
