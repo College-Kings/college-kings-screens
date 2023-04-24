@@ -1,1 +1,1 @@
-default show_reputation = True
+default show_reputation = False
