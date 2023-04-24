@@ -37,8 +37,8 @@ screen path_builder_starting_location():
             color "#FFF"
 
     imagebutton:
-        idle "gui/common/return_idle.webp"
-        hover "gui/common/return_hover.webp"
+        idle "return_button_idle"
+        hover "return_button_hover"
         action MainMenu(False, False)
         pos (50, 20)
          

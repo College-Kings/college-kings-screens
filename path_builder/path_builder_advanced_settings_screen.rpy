@@ -7,8 +7,8 @@ screen path_builder_advanced_settings():
     add image_path + "path_builder_background.webp"
 
     imagebutton:
-        idle "gui/common/return_idle.webp"
-        hover "gui/common/return_hover.webp"
+        idle "return_button_idle"
+        hover "return_button_hover"
         action Hide("path_builder_advanced_settings")
         align (0.015, 0.015)
         
