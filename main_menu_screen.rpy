@@ -43,10 +43,10 @@ screen main_menu():
 
     else:
         imagebutton:
-            idle image_path + "patreon_idle.webp"
-            hover Transform(image_path + "patreon_hover.webp", xpos=-28)
+            idle "main_menu_patreon_idle"
+            hover "main_menu_patreon_hover"
             action OpenURL("https://www.patreon.com/collegekings")
-            pos (118, 36)
+            pos (35, 35)
 
     # Discord
     imagebutton:
