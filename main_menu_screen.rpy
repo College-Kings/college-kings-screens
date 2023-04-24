@@ -33,6 +33,7 @@ screen main_menu():
             idle "main_menu_patreon_idle"
             hover "main_menu_patreon_hover"
             action OpenURL("https://www.patreon.com/collegekings")
+            pos (35, 35)
 
     # Discord
     imagebutton:
