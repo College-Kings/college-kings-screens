@@ -142,10 +142,6 @@ screen file_slots(title):
             hover "gui/common/quit_hover.webp"
             action Quit(confirm=not main_menu)
 
-    text str(renpy.loadsave.location.locations[0].directory)
-
-    # timer 0.1 action Function(change_save_location, "CollegeKings2") repeat True
-    on "show" action [Function(change_save_location, "CollegeKings2")]
 
 style file_slots_title is montserrat_extra_bold_64
 

@@ -9,14 +9,3 @@ screen load():
         text_align 0.5
         xsize 1450
         ypos 900
-
-    # CK1 -> CK2 Saves
-    button:
-        idle_background "purple_button_idle"
-        hover_background "purple_button_hover"
-        padding (200, 45)
-        xalign 0.5
-        yalign 1.0
-        action [ShowMenu("ck1_save_load_warning"), Function(change_save_location, "CollegeKings")]
-
-        text "Load CK1 Save" style "bebas_neue_30" align (0.5, 0.5)
