@@ -370,15 +370,16 @@ screen preferences():
             sensitive False
             
             text "Translations" align (0.5, 0.5)
-
-        button:
-            idle_background "blue_button_idle"
-            hover_background "blue_button_hover"
-            selected_background "blue_button_hover"
-            action Show("connect_lovense")
-            padding (40, 25)
-            
-            text "Connect Lovense" align (0.5, 0.5)
+        
+        if is_CK2:
+            button:
+                idle_background "blue_button_idle"
+                hover_background "blue_button_hover"
+                selected_background "blue_button_hover"
+                action Show("connect_lovense")
+                padding (40, 25)
+                
+                text "Connect Lovense" align (0.5, 0.5)
 
         if _in_replay:
             button:
