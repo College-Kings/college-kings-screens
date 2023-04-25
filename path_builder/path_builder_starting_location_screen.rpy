@@ -1,23 +1,12 @@
 init python:
     pb_start_label = ""
 
-image path_builder_episode_1_start = "screens/path_builder/images/episode_1_start.webp"
-image path_builder_episode_2_start = "screens/path_builder/images/episode_2_start.webp"
-image path_builder_episode_3_start = "screens/path_builder/images/episode_3_start.webp"
-
 screen path_builder_starting_location():
     tag path_builder
     modal True
     style_prefix "path_builder"
 
     default image_path = "screens/path_builder/images"
-
-    python:
-        episodes = [ ("episode_1_start", "v1_start") ]
-        if has_ep2():
-            episodes.append(("episode_2_start", "ep2_s1a"))
-        if has_ep3():
-            episodes.append(("episode_3_start", "ep3_start"))
 
     add "path_builder_background"
     add image_path + "/path_builder_box_background.webp" align (0.5, 0.5)
@@ -52,26 +41,27 @@ screen path_builder_starting_location():
         ypos 450
         allow_underfull True
 
-        for i, l in episodes:
-            vbox:
-                imagebutton:
-                    idle "path_builder_{}".format(i)
-                    action SetVariable("pb_start_label", l)
-                    xalign 0.5
+        for i, l in pb_starting_locations:
+            if i is not None or l is not None:
+                vbox:
+                    imagebutton:
+                        idle "path_builder_{}".format(i)
+                        action SetVariable("pb_start_label", l)
+                        xalign 0.5
 
-                imagebutton:
-                    idle "path_builder_button_idle_dark"
-                    hover "path_builder_button_hover"
-                    selected_idle "path_builder_button_hover"
-                    action SetVariable("pb_start_label", l)
-                    xalign 0.5
-                    yoffset -35
+                    imagebutton:
+                        idle "path_builder_button_idle_dark"
+                        hover "path_builder_button_hover"
+                        selected_idle "path_builder_button_hover"
+                        action SetVariable("pb_start_label", l)
+                        xalign 0.5
+                        yoffset -35
 
-                text i.replace('_', ' '):
-                    align (0.5, 0.5)
-                    yoffset -87
-                    size 30
-                    color "#FFF"
+                    text i.replace('_', ' '):
+                        align (0.5, 0.5)
+                        yoffset -87
+                        size 30
+                        color "#FFF"
 
     if pb_start_label == "v1_start":
         text "ACHIEVEMENTS ARE EARNABLE" xalign 0.5 ypos 750
