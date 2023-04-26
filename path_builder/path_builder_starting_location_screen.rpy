@@ -57,7 +57,7 @@ screen path_builder_starting_location():
                         xalign 0.5
                         yoffset -35
 
-                    text i.replace('_', ' ').upper():
+                    text i:
                         align (0.5, 0.5)
                         yoffset -87
                         size 30
