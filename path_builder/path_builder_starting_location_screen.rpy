@@ -45,7 +45,7 @@ screen path_builder_starting_location():
             if i is not None or l is not None:
                 vbox:
                     imagebutton:
-                        idle "path_builder_{}".format(i)
+                        idle "path_builder_{}".format(i.replace(' ', '_').lower())
                         action SetVariable("pb_start_label", l)
                         xalign 0.5
 
@@ -57,7 +57,7 @@ screen path_builder_starting_location():
                         xalign 0.5
                         yoffset -35
 
-                    text i.replace('_', ' '):
+                    text i:
                         align (0.5, 0.5)
                         yoffset -87
                         size 30
