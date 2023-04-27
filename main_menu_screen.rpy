@@ -41,8 +41,8 @@ screen main_menu():
         hover "main_menu_discord_hover"
         action OpenURL("https://discord.gg/collegekings")
         xalign 1.0
-        xoffset -25
-        ypos 25
+        xoffset -35
+        ypos 35
 
     # Scene Gallery
     imagebutton:
