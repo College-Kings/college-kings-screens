@@ -371,7 +371,7 @@ screen preferences():
             
             text "Translations" align (0.5, 0.5)
         
-        if is_CK2:
+        if is_CK2 and False:
             button:
                 idle_background "blue_button_idle"
                 hover_background "blue_button_hover"
