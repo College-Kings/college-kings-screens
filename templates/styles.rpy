@@ -1,0 +1,2 @@
+style alert_text is bebas_neue_30
+style warning_text is bebas_neue_30
