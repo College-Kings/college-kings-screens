@@ -9,11 +9,10 @@ screen main_menu():
     style_prefix "main_menu"
 
     python:
-        with open(os.path.join(config.gamedir, "whats_new", "whats-new.txt"), "r") as f:
+        with renpy.open_file("whats_new/whats-new.txt") as f:
             what_new_content = f.read()
 
     default image_path = "gui/main_menu/"
-
 
     add "main_menu_background"
 
