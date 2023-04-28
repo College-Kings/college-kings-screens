@@ -1,9 +1,9 @@
 #region Common
 image return_button_idle = "screens/images/return_idle.png"
 image return_button_hover = "screens/images/return_hover.png"
-image pink_button_idle = "screens/images/pink_idle.png"
-image pink_button_hover = "screens/images/pink_hover.png"
-image pink_button_insensitive = Transform("pink_idle", matrixcolor=SaturationMatrix(0))
+image pink_idle = "screens/images/pink_idle.png"
+image pink_hover = "screens/images/pink_hover.png"
+image pink_insensitive = Transform("pink_idle", matrixcolor=SaturationMatrix(0))
 #endregion Common
 
 #region Main Menu
