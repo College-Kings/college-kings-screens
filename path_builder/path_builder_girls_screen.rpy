@@ -103,7 +103,7 @@ screen path_builder_girls():
 
         imagebutton:
             idle image_path + "/back.webp"
-            action Show("path_builder_reputation")
+            action Show("path_builder_fraternity")
 
         imagebutton:
             idle image_path + "/continue.webp"

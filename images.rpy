@@ -4,6 +4,8 @@ image return_button_hover = "screens/images/return_hover.png"
 image pink_idle = "screens/images/pink_idle.png"
 image pink_hover = "screens/images/pink_hover.png"
 image pink_insensitive = Transform("pink_idle", matrixcolor=SaturationMatrix(0))
+image menu_idle = "screens/images/menu_idle.png"
+image menu_hover = "screens/images/menu_hover.png"
 #endregion Common
 
 #region Main Menu
