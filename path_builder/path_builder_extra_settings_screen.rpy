@@ -4,16 +4,6 @@ screen path_builder_extra_settings():
     style_prefix "path_builder"
 
     default image_path = "screens/path_builder/images"
-    default items = (
-        ("Helping Chloe's campaign", ToggleVariable("v1_help_chloe")),
-        ("Helping Lindsey's campaign", ToggleVariable("v1_help_lindsey")),
-        ("Encourage Amber to get clean", ToggleVariable("v1_amber_clean")),
-        ("Let Samantha do drugs", ToggleVariable("v1_SamanthaDrugs")),
-        ("Told Emily you love her", ToggleVariable("v1_emily_ily")),
-        ("Angry at Ms. Rose", ToggleVariable("v2_mad_at_ms_rose")),
-        ("Lindsey wins the Chicks election", ToggleVariable("v3_lindsey_president")),
-        ("Maximum Pool Party Donations", [ToggleVariable("ep3s12_social_committee_poolparty_earned", EP3S12_PoolPartyFundsEarned.HIGH, EP3S12_PoolPartyFundsEarned.LOW), ToggleVariable("ep2s35_nora_attitude_pool_party_success", 3, 0)]),
-    )
 
     add "path_builder_background"
     add image_path + "/path_builder_box_background.webp" align (0.5, 0.5)
@@ -47,7 +37,7 @@ screen path_builder_extra_settings():
         allow_underfull True
         align (0.5, 0.5)
 
-        for item in items:
+        for name, actions in pb_extra_options:
             hbox:
                 ysize 80
                 spacing 10
@@ -56,9 +46,9 @@ screen path_builder_extra_settings():
                     idle image_path + "/pb_tick.webp"
                     hover image_path + "/pb_ticked.webp"
                     selected_idle image_path + "/pb_ticked.webp"
-                    action item[1]
+                    action actions
 
-                text item[0] ypos -5
+                text name ypos -5
 
     hbox:
         spacing 50
