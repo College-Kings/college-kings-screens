@@ -1,1 +1,2 @@
 style path_builder_text is bebas_neue_30
+style path_builder_advanced_settings_text is path_builder_text
