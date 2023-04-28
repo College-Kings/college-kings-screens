@@ -66,12 +66,12 @@ screen path_builder_girls():
                 relationship = CharacterService.get_relationship(girl, mc)
 
             button:
-                idle_background "images/common/girl_button/idle.webp"
-                hover_background "images/common/girl_button/hover.webp"
-                insensitive_background Transform("images/common/girl_button/idle.webp", matrixcolor=SaturationMatrix(0))
+                background "pink_button_idle"
+                hover_background "pink_button_hover"
+                insensitive_background  "pink_button_insensitive"
                 sensitive (required_frat is None or required_frat == mc.frat)
                 xysize (307, 112)
-                action Function(CharacterService.set_relationship, girl, possible_relationships[(possible_relationships.index(relationship) + 1) % len(possible_relationships)], mc)
+                action Function(CharacterService.set_relationship, girl, possible_relationships[(possible_relationships.index(relationship) + 1) % len(possible_relationships)])
 
                 if (required_frat is None or required_frat == mc.frat):
                     add Transform(girl.profile_picture, xysize=(100, 100)) xpos 6 yalign 0.5
