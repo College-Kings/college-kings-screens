@@ -7,7 +7,7 @@ screen path_builder_advanced_settings():
         ("Show preferred reputation for each girl (in Step 04)", ToggleVariable("pb_reputation_shown")),
         ("Show a notification whenever you gain reputation points", ToggleVariable("pb_reputation_notification"))
     ]
-    
+
     python:
         if is_CK2:
             gameplay_options.append(("Unlimited Presidency Campaign Budget", [ToggleVariable("lindsey_board.money", 10000, 200), ToggleVariable("chloe_board.money", 10000, 1500)]))
@@ -39,8 +39,7 @@ screen path_builder_advanced_settings():
                         selected_idle image_path + "pb_ticked.webp"
                         action actions
 
-                    text name:
-                        yoffset -7
+                    text name
 
 
         vbox:
