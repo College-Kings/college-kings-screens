@@ -41,27 +41,26 @@ screen path_builder_starting_location():
         ypos 450
         allow_underfull True
 
-        for i, l in pb_starting_locations:
-            if i is not None or l is not None:
-                vbox:
-                    imagebutton:
-                        idle "path_builder_{}".format(i.replace(' ', '_').lower())
-                        action SetVariable("pb_start_label", l)
-                        xalign 0.5
+        for i, l in (i for i in pb_starting_locations if i):
+            vbox:
+                imagebutton:
+                    idle "path_builder_{}".format(i.replace(' ', '_').lower())
+                    action SetVariable("pb_start_label", l)
+                    xalign 0.5
 
-                    imagebutton:
-                        idle "path_builder_button_idle_dark"
-                        hover "path_builder_button_hover"
-                        selected_idle "path_builder_button_hover"
-                        action SetVariable("pb_start_label", l)
-                        xalign 0.5
-                        yoffset -35
+                imagebutton:
+                    idle "path_builder_button_idle_dark"
+                    hover "path_builder_button_hover"
+                    selected_idle "path_builder_button_hover"
+                    action SetVariable("pb_start_label", l)
+                    xalign 0.5
+                    yoffset -35
 
-                    text i:
-                        align (0.5, 0.5)
-                        yoffset -87
-                        size 30
-                        color "#FFF"
+                text i:
+                    align (0.5, 0.5)
+                    yoffset -87
+                    size 30
+                    color "#FFF"
 
     if pb_start_label == "v1_start":
         text "ACHIEVEMENTS ARE EARNABLE" xalign 0.5 ypos 750
