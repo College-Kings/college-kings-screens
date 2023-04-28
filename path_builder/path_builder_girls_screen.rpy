@@ -5,22 +5,7 @@ screen path_builder_girls():
     style_prefix "path_builder"
 
     default image_path = "screens/path_builder/images"
-    default girls = (
-        (amber, None, Reputations.POPULAR, (Relationship.FRIEND, Relationship.FWB)),
-        (aubrey, None, Reputations.POPULAR, (Relationship.FRIEND, Relationship.FWB, Relationship.GIRLFRIEND)),
-        (autumn, None, Reputations.LOYAL, (Relationship.FRIEND, Relationship.FWB)),
-        (chloe, None, Reputations.POPULAR, (Relationship.EX, Relationship.FRIEND, Relationship.FWB, Relationship.GIRLFRIEND)),
-        (emily, None, Reputations.LOYAL, (Relationship.FRIEND, Relationship.FWB)),
-        (jenny, None, Reputations.POPULAR, (Relationship.FRIEND, Relationship.FWB)),
-        (lauren, None, Reputations.LOYAL, (Relationship.EX, Relationship.FRIEND, Relationship.FWB, Relationship.GIRLFRIEND)),
-        (lindsey, None, Reputations.POPULAR, (Relationship.FRIEND, Relationship.FWB)),
-        (ms_rose, Frat.WOLVES, Reputations.CONFIDENT, (Relationship.FRIEND, Relationship.FWB)),
-        (naomi, None, Reputations.POPULAR, (Relationship.FRIEND, Relationship.FWB)),
-        (nora, None, Reputations.CONFIDENT, (Relationship.EX, Relationship.FRIEND, Relationship.FWB, Relationship.GIRLFRIEND)),
-        (penelope, None, Reputations.CONFIDENT, (Relationship.EX, Relationship.FRIEND, Relationship.DATING, Relationship.GIRLFRIEND)),
-        (riley, None, Reputations.CONFIDENT, (Relationship.FRIEND, Relationship.FWB)),
-        (samantha, Frat.APES, Reputations.LOYAL, (Relationship.FRIEND, Relationship.FWB)),
-    )
+
 
     default selected_rep = None
 
@@ -57,13 +42,9 @@ screen path_builder_girls():
         align (0.5, 0.5)
         yoffset 75
 
-        for girl_info in girls:
+        for girl_obj, required_frat, preferred_reputation, possible_relationships in pb_girls:
             python:
-                girl = girl_info[0]
-                required_frat = girl_info[1]
-                preferred_reputation = girl_info[2]
-                possible_relationships = girl_info[3]
-                relationship = CharacterService.get_relationship(girl, mc)
+                relationship = CharacterService.get_relationship(girl_obj)
 
             button:
                 background "pink_idle"
@@ -71,19 +52,19 @@ screen path_builder_girls():
                 insensitive_background  "pink_insensitive"
                 sensitive (required_frat is None or required_frat == mc.frat)
                 xysize (307, 112)
-                action Function(CharacterService.set_relationship, girl, possible_relationships[(possible_relationships.index(relationship) + 1) % len(possible_relationships)])
+                action Function(CharacterService.set_relationship, girl_obj, possible_relationships[(possible_relationships.index(relationship) + 1) % len(possible_relationships)])
 
                 if (required_frat is None or required_frat == mc.frat):
-                    add Transform(girl.profile_picture, xysize=(100, 100)) xpos 6 yalign 0.5
+                    add Transform(girl_obj.profile_picture, xysize=(100, 100)) xpos 6 yalign 0.5
                 else:
-                    add Transform(girl.profile_picture, xysize=(100, 100), matrixcolor=SaturationMatrix(0)) xpos 6 yalign 0.5
+                    add Transform(girl_obj.profile_picture, xysize=(100, 100), matrixcolor=SaturationMatrix(0)) xpos 6 yalign 0.5
 
                 vbox:
                     xpos 120
                     yalign 0.5
                     spacing -2
 
-                    text girl.name:
+                    text girl_obj.name:
                         size 30
                         color "#FFF"
 
