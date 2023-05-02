@@ -2,3 +2,22 @@ image ck1_end_screen_background_steam = "screens/end_screens/images/ck1_end_scre
 image ck1_end_screen_background = "screens/end_screens/images/ck1_end_screen_background.webp"
 image get_access_idle = "screens/end_screens/images/get_access_idle.webp"
 image get_access_hover = "screens/end_screens/images/get_access_hover.webp"
+image end_screen_text = "screens/end_screens/images/end_text.webp"
+
+image end_screen_background:
+    "screens/end_screens/images/end_01.webp" with dissolve
+    pause 5.0
+    
+    "screens/end_screens/images/end_02.webp" with dissolve
+    pause 5.0
+
+    "screens/end_screens/images/end_03.webp" with dissolve
+    pause 5.0
+
+    "screens/end_screens/images/end_04.webp" with dissolve
+    pause 5.0
+
+    "screens/end_screens/images/end_05a.webp" with dissolve
+    pause 5.0
+
+    repeat
