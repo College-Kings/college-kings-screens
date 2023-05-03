@@ -42,10 +42,13 @@ screen path_builder_girls():
         align (0.5, 0.5)
         yoffset 75
 
-        for girl_obj, required_frat, preferred_reputation, possible_relationships in pb_girls:
+        for girl_obj in pb_girls:
             python:
+                required_frat = pb_girls[girl_obj]["required_frat"]
+                preferred_reputation = pb_girls[girl_obj]["preferred_reputation"]
+                possible_relationships = pb_girls[girl_obj]["possible_relationships"]
                 relationship = CharacterService.get_relationship(girl_obj)
-
+                
             button:
                 background "pink_idle"
                 hover_background "pink_hover"
