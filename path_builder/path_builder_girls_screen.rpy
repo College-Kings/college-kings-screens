@@ -44,7 +44,7 @@ screen path_builder_girls():
 
         for girl_obj in pb_girls:
             python:
-                required_frat = pb_girls[girl_obj]["required_frat"]
+                required_frat = pb_girls[girl_obj]["frat_requirement"]
                 preferred_reputation = pb_girls[girl_obj]["preferred_reputation"]
                 possible_relationships = pb_girls[girl_obj]["possible_relationships"]
                 relationship = CharacterService.get_relationship(girl_obj)
