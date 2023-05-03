@@ -9,7 +9,7 @@ screen main_menu():
     style_prefix "main_menu"
 
     python:
-        with renpy.open_file("whats_new/whats-new.txt") as f:
+        with renpy.open_file("whats_new/whats-new.txt", "utf-8") as f:
             what_new_content = f.read()
 
     default image_path = "gui/main_menu/"
@@ -84,7 +84,7 @@ screen main_menu():
         imagebutton:
             idle image_path + "whats-new-idle.webp"
             hover image_path + "whats-new-hover.webp"
-            action Show("whats_new")
+            action Show("whats_new", data=what_new_content)
             yalign 0.5
 
         # LEARN MORE
@@ -115,7 +115,7 @@ screen main_menu():
     on "show" action [Play("music", audio.music.ck2_main_menu_theme_start), Queue("music", audio.music.ck2_main_menu_theme_loop, loop=True)]
 
     if not config_debug and not what_new_content == persistent.previous_whats_new:
-        on "show" action Show("whats_new")
+        on "show" action Show("whats_new", data=what_new_content)
 
     if config_debug:
         timer 0.1 action Start()
