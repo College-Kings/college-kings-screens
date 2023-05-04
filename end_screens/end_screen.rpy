@@ -3,9 +3,13 @@ screen end_screen(support_link=""):
     modal True
     style_prefix "end_screen"
 
-    default image_path = "gui/end_screen/"
-
     add "end_screen_background"
+
+    textbutton "COLLEGE KINGS EPISODE 4 IS CURRENTLY IN DEVELOPMENT":
+        text_style "end_screen_title"
+        xalign 0.5
+        ypos 100
+        # action OpenURL("steam://openurl/https://store.steampowered.com/app/2267960/College_Kings_2__Episode_3_Back_To_Basics/")
 
     hbox:
         align (0.5, 1.0)
@@ -16,12 +20,6 @@ screen end_screen(support_link=""):
             xpos 50
             ysize 500
 
-            textbutton "COLLEGE KINGS EPISODE 4 IS CURRENTLY IN DEVELOPMENT":
-                style "end_screen_title"
-                xsize 900
-                yalign 0.5
-                # action OpenURL("steam://openurl/https://store.steampowered.com/app/2267960/College_Kings_2__Episode_3_Back_To_Basics/")
-
             hbox:
                 align (0.5, 0.5)
                 spacing 25
@@ -29,7 +27,7 @@ screen end_screen(support_link=""):
                 text "Get the latest updates on our Discord" style "end_screen_large_text" yalign 0.5
                 
                 imagebutton:
-                    idle image_path + "discord_button_idle.png"
+                    idle "discord_idle"
                     action OpenURL("https://discord.gg/collegekings")
                     yalign 0.5 
 
@@ -38,18 +36,18 @@ screen end_screen(support_link=""):
                 spacing 100
 
                 imagebutton:
-                    idle image_path + "main_menu_idle.webp"
-                    hover image_path + "main_menu_hover.webp"
+                    idle "main_menu_idle"
+                    hover "main_menu_hover"
                     action MainMenu()
 
                 imagebutton:
-                    idle image_path + "team_idle.webp"
-                    hover image_path + "team_hover.webp"
+                    idle "team_idle"
+                    hover "team_hover"
                     action Show("team_credits")
                     yalign 0.5
 
         frame:
-            background image_path + "end_screen_frame_background.png"
+            background "end_screen_frame_background"
             xysize (910, 500)
             padding (50, 50)
             align (1.0, 0.5)
@@ -66,7 +64,7 @@ screen end_screen(support_link=""):
                     xalign 0.5
                     spacing 15
 
-                    add image_path + "steam_logo.png" yalign 0.5
+                    add "steam_logo" yalign 0.5
                     
                     textbutton "STEAM":
                         action OpenURL("steam://openurl/https://store.steampowered.com/app/2156300/Unscripted/")
