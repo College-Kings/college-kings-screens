@@ -6,7 +6,7 @@ screen kiwiiPopup():
 
         textbutton _("OK"):
             xalign 0.5
-            action [Function(kiwii_firstTimeMessages), SetVariable("kiwii_first_time", False), Hide("kiwiiPopup")]
+            action [Function(kiwii_firstTimeMessages), Show("phone"), Hide("kiwiiPopup")]
 
     if config_debug:
-        timer 0.1 action [Function(kiwii_firstTimeMessages), SetVariable("kiwii_first_time", False), Hide("kiwiiPopup")]
+        timer 0.1 action [Function(kiwii_firstTimeMessages), Hide("kiwiiPopup")]
