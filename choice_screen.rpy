@@ -38,10 +38,10 @@ screen choice(items, seconds=3, fail_label=None):
                         text "[item.caption!uit]" align (0.5, 0.5)
 
     if fail_label is not None:
+        use timer_bar(seconds)
+
         timer seconds:
             action Jump(fail_label)
-
-        use timer_bar(seconds)
 
     if config_debug:
         $ item = renpy.random.choice(items)
