@@ -3,14 +3,17 @@ screen path_builder_advanced_settings():
     modal True
 
     default image_path = "screens/path_builder/images/"
-    default gameplay_options = [
-        ("Show preferred reputation for each girl (in Step 04)", ToggleVariable("pb_reputation_shown")),
-        ("Show a notification whenever you gain reputation points", ToggleVariable("pb_reputation_notification"))
-    ]
-
-    python:
-        if is_CK2:
-            gameplay_options.append(("Unlimited Presidency Campaign Budget", [ToggleVariable("lindsey_board.money", 10000, 200), ToggleVariable("chloe_board.money", 10000, 1500)]))
+    if is_CK2:
+        default gameplay_options = (
+            ("Show preferred reputation for each girl (in Step 04)", ToggleVariable("pb_reputation_shown")),
+            ("Show a notification whenever you gain reputation points", ToggleVariable("pb_reputation_notification")),
+            ("Unlimited Presidency Campaign Budget", [ToggleVariable("lindsey_board.money", 10000, 200), ToggleVariable("chloe_board.money", 10000, 1500)])
+        )
+    else:
+        default gameplay_options = (
+            ("Show preferred reputation for each girl (in Step 04)", ToggleVariable("pb_reputation_shown")),
+            ("Show a notification whenever you gain reputation points", ToggleVariable("pb_reputation_notification"))
+        )
 
     add image_path + "path_builder_background.webp"
 
