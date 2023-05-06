@@ -13,10 +13,6 @@ screen file_slots(title):
     default page_name_value = FilePageNameInputValue(pattern=_("PAGE {}"), auto=_("AUTOMATIC SAVES"), quick=_("QUICK SAVES"))
     default image_path = "gui/file_slots/"
 
-    python:
-        incompatible_game_versions = {"12.0.0", "0.6.4"}
-        incompatible_renpy_versions = {"7.4.8.1895", "7.4.7.1862"}
-
     add image_path + "background.webp"
 
     text "{} Game".format(title):
@@ -54,14 +50,6 @@ screen file_slots(title):
             spacing 35
 
             for slot in range(1, grid_cols * grid_rows + 1):
-                python:
-                    game_version = FileJson(slot, key="_version") or ""
-                    game_version = '.'.join(str(i) for i in game_version)
-                    renpy_version = FileJson(slot, key="_renpy_version") or ""
-                    renpy_version = '.'.join(str(i) for i in renpy_version)
-                    is_file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
-
-
                 button:
                     background Transform(FileScreenshot(slot), size=(config.thumbnail_width, config.thumbnail_height))
                     if title == _("Save"):
@@ -70,14 +58,11 @@ screen file_slots(title):
                         action FileAction(slot)
                     xysize (config.thumbnail_width, config.thumbnail_height)
 
-                    if is_file_compatable:
-                        vbox:
-                            align (0.5, 1.0)
+                    vbox:
+                        align (0.5, 1.0)
 
-                            text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")).upper() xalign 0.5
-                            text FileSaveName(slot).upper() xalign 0.5
-                    else:
-                        add image_path + "incompatible.webp" xalign 0.5 yoffset -7
+                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")).upper() xalign 0.5
+                        text FileSaveName(slot).upper() xalign 0.5
 
                     key "save_delete" action FileDelete(slot)
 
