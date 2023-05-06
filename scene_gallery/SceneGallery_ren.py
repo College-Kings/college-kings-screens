@@ -1,8 +1,10 @@
 from __future__ import annotations
-from typing import Optional, Any
+from typing import Callable, Optional, Any
 
-from renpy import store, _
 from renpy.display.transform import Transform
+
+_: Callable[[str], str]
+scopeDict: dict[str, Any]
 
 """renpy
 init python:
@@ -25,6 +27,6 @@ class SceneGallery:
 
 
 def update_scope(new_scope: dict[str, Any]) -> dict[str, Any]:
-    rv: dict[str, Any] = store.scopeDict.copy()
+    rv: dict[str, Any] = scopeDict.copy()
     rv.update(new_scope)
     return rv
