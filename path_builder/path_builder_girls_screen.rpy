@@ -5,8 +5,6 @@ screen path_builder_girls():
     style_prefix "path_builder"
 
     default image_path = "screens/path_builder/images"
-
-
     default selected_rep = None
 
     add "path_builder_background"
