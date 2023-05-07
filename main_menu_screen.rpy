@@ -112,7 +112,7 @@ screen main_menu():
 
     text "v{}".format('.'.join(str(x) for x in config.version)) align (1.0, 1.0) xoffset -20 color "#4e628f" size 30
 
-    on "show" action [Play("music", audio.music.ck2_main_menu_theme_start), Queue("music", audio.music.ck2_main_menu_theme_loop, loop=True)]
+    on "show" action [Play("music", audio.music.ck2.main_menu_theme_start), Queue("music", audio.music.ck2.main_menu_theme_loop, loop=True)]
 
     if not config_debug and not what_new_content == persistent.previous_whats_new:
         on "show" action Show("whats_new", data=what_new_content)
