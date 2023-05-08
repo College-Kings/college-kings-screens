@@ -46,6 +46,7 @@ screen path_builder_girls():
                 preferred_reputation = pb_girls[girl_obj]["preferred_reputation"]
                 possible_relationships = pb_girls[girl_obj]["possible_relationships"]
                 relationship = CharacterService.get_relationship(girl_obj)
+                next_relationship = possible_relationships[(possible_relationships.index(relationship) + 1) % len(possible_relationships)]
                 
             button:
                 background "pink_idle"
@@ -53,7 +54,7 @@ screen path_builder_girls():
                 insensitive_background  "pink_insensitive"
                 sensitive (required_frat is None or required_frat == mc.frat)
                 xysize (307, 112)
-                action Function(CharacterService.set_relationship, girl_obj, possible_relationships[(possible_relationships.index(relationship) + 1) % len(possible_relationships)])
+                action Function(CharacterService.set_relationship, girl_obj, next_relationship)
 
                 if (required_frat is None or required_frat == mc.frat):
                     add Transform(girl_obj.profile_picture, xysize=(100, 100)) xpos 6 yalign 0.5
