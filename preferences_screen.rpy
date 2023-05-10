@@ -365,9 +365,8 @@ screen preferences():
             hover_background "blue_button_hover"
             selected_background "blue_button_hover"
             insensitive_background Transform("blue_button_idle", matrixcolor=SaturationMatrix(0))
-            action NullAction()
+            action Show("translation_selector")
             padding (50, 25)
-            sensitive False
             
             text "Translations" align (0.5, 0.5)
         
