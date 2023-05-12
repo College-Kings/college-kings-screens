@@ -10,6 +10,12 @@ screen confirm(message, yes_action=Hide(), no_action=Hide()):
     modal True
     style_prefix "confirm"
 
+    python:
+        if not isinstance(yes_action, list):
+            yes_action = [yes_action]
+        if not isinstance(no_action, list):
+            no_action = [no_action]
+
     add "darker_80"
 
     use alert_template(message.upper()):
@@ -17,7 +23,7 @@ screen confirm(message, yes_action=Hide(), no_action=Hide()):
         button:
             idle_background "blue_button_idle"
             hover_background "blue_button_hover"
-            action yes_action
+            action [Hide()] + list(yes_action)
             padding (50, 15)
             xsize 150
 
@@ -26,7 +32,7 @@ screen confirm(message, yes_action=Hide(), no_action=Hide()):
         button:
             idle_background "blue_button_idle"
             hover_background "blue_button_hover"
-            action no_action
+            action [Hide()] + list(no_action)
             padding (50, 15)
             xsize 150
 
