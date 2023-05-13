@@ -1,7 +1,7 @@
 screen censored_popup(continueLabel):
     modal True
 
-    add "gui/censoredPopup/censoredBackground.webp"
+    add "gui/censoredPopup/censored_background.webp"
 
     text _("THE NEXT SCENE HAS NSFW CONTENT"):
         size 70
