@@ -1,7 +1,7 @@
 screen censored_popup(continueLabel):
     modal True
 
-    add "gui/censoredPopup/censored_background.webp"
+    add "censored_background"
 
     text _("THE NEXT SCENE HAS NSFW CONTENT"):
         size 70
@@ -60,17 +60,17 @@ screen censored_popup(continueLabel):
         xalign 0.5
         ypos 555
         if is_censored:
-            idle Transform("gui/censoredPopup/censoredSettings.webp", zoom=0.65)
-            hover Transform("gui/censoredPopup/censoredSettingsHover.webp", zoom=0.65)
+            idle "censored_settings"
+            hover "censored_settings_hover"
             action ShowMenu("preferences")
         else:
-            idle Transform("gui/censoredPopup/censoredContinue.webp", zoom=0.65)
-            hover Transform("gui/censoredPopup/censoredContinueHover.webp", zoom=0.65)
+            idle "censored_continue"
+            hover "censored_continue_hover"
             action Return()
 
     imagebutton:
-        idle Transform("gui/censoredPopup/censoredSkipScene.webp", zoom=0.65)
-        hover Transform("gui/censoredPopup/censoredSkipSceneHover.webp", zoom=0.65)
+        idle "censored_skip_scene"
+        hover "censored_skip_scene_hover"
         action Jump(continueLabel)
         xalign 0.5
         ypos 790
