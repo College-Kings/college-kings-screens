@@ -17,15 +17,16 @@ screen main_menu():
     add "main_menu_background"
 
     if not is_patreon():
-        vbox:
-            pos (50, 25)
-            spacing 25
+        pass
+        # vbox:
+        #     pos (50, 25)
+        #     spacing 25
 
-            # Unscripted
-            imagebutton:
-                idle image_path + "unscripted_idle.png"
-                hover Transform(image_path + "unscripted_idle.png", matrixcolor=BrightnessMatrix(0.2))
-                action OpenURL("steam://openurl/https://store.steampowered.com/app/2156300/Unscripted/")
+        #     # Unscripted
+        #     imagebutton:
+        #         idle image_path + "unscripted_idle.png"
+        #         hover Transform(image_path + "unscripted_idle.png", matrixcolor=BrightnessMatrix(0.2))
+        #         action OpenURL("steam://openurl/https://store.steampowered.com/app/2156300/Unscripted/")
 
     else:
         imagebutton:
