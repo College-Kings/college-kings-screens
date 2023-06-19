@@ -15,7 +15,9 @@ screen warning_template(message, style="blue"):
 
             null height 50
 
-            text _(message.upper()) xalign 0.5 xsize 650
+            text "[message!tu]":
+                xalign 0.5
+                xsize 650
 
             hbox:
                 xalign 0.5
@@ -24,3 +26,4 @@ screen warning_template(message, style="blue"):
                 transclude
 
             null height 50
+            
