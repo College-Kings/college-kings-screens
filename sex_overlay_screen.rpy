@@ -1,5 +1,4 @@
 screen sex_overlay(continue_label):
-    default image_path = "images/custom-screens/sex-overlay/"
     default show_sex_overlay = False
 
     vbox:
@@ -7,29 +6,29 @@ screen sex_overlay(continue_label):
         spacing -100
 
         imagebutton:
-            idle image_path + "sex-positions-idle.webp"
-            hover image_path + "sex-positions-hover.webp"
-            selected_idle image_path + "sex-positions-selected.webp"
+            idle "sex_overlay_sex_positions_idle"
+            hover "sex_overlay_sex_positions_hover"
+            selected_idle "sex_overlay_sex_positions_selected"
             action ToggleScreenVariable("show_sex_overlay")
 
         null height 150
 
         if show_sex_overlay:
-            for option in sex_overlay_options:
+            for sex_move, l in sex_overlay_options:
                 button:
-                    idle_background image_path + "sex-button-idle.webp"
-                    hover_background image_path + "sex-button-hover.webp"
+                    idle_background "sex_overlay_sex_button_idle"
+                    hover_background "sex_overlay_sex_button_hover"
                     focus_mask True
-                    action Jump(option[1])
+                    action Jump(l)
                     xysize (366, 191)
                     xpos -25
 
-                    text option[0] align (0.5, 0.5)
+                    text "[sex_move!t]" align (0.5, 0.5)
 
     imagebutton:
-        idle image_path + "continue-idle.webp"
-        hover image_path + "continue-hover.webp"
-        action Show("confirm", message=_("Are you sure you want to end the free roam?"), yes_action=[Hide("confirm"), Jump(continue_label)])
+        idle "sex_overlay_continue_idle"
+        hover "sex_overlay_continue_hover"
+        action Show("confirm", message=_("Are you sure you want to end the scene?"), yes_action=Jump(continue_label))
         xalign 1.0
         xoffset -100
         ypos 100
