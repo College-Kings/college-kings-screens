@@ -8,6 +8,16 @@ image menu_idle = "screens/images/menu_idle.png"
 image menu_hover = "screens/images/menu_hover.png"
 #endregion Common
 
+#region Censored Popup
+image censored_background = "screens/images/censored_popup/censored_background.webp"
+image censored_settings = Transform("screens/images/censored_popup/censored_settings.webp", zoom=0.65)
+image censored_settings_hover = Transform("screens/images/censored_popup/censored_settings_hover.webp", zoom=0.65)
+image censored_continue = Transform("screens/images/censored_popup/censored_continue.webp", zoom=0.65)
+image censored_continue_hover = Transform("screens/images/censored_popup/censored_continue_hover.webp", zoom=0.65)
+image censored_skip_scene = Transform("screens/images/censored_popup/censored_skip_scene.webp", zoom=0.65)
+image censored_skip_scene_hover = Transform("screens/images/censored_popup/censored_skip_scene_hover.webp", zoom=0.65)
+#endregion Censored Popup
+
 #region Main Menu
 image main_menu_patreon_idle = "screens/images/main_menu/patreon_idle.png"
 image main_menu_patreon_hover = "screens/images/main_menu/patreon_hover.png"
