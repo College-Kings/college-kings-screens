@@ -1,6 +1,6 @@
 default persistent.name = ""
 default persistent.gallery_lock = None
-default scopeDict = {}
+default global_replay_scope = {}
 
 screen scene_gallery():
     tag menu
@@ -86,6 +86,6 @@ label scene_gallery_name_change:
     if not persistent.name.strip():
         $ persistent.name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
 
-    $ scopeDict = {"name": persistent.name}
+    $ global_replay_scope = {"name": persistent.name}
 
     return

@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 
 from renpy.display.transform import Transform
 
-scopeDict: dict[str, object]
+global_replay_scope: dict[str, object]
 
 """renpy
 init python:
@@ -23,6 +23,6 @@ class SceneGallery:
 
 
 def update_scope(new_scope: dict[str, object]) -> dict[str, object]:
-    rv: dict[str, object] = scopeDict.copy()
+    rv: dict[str, object] = global_replay_scope.copy()
     rv.update(new_scope)
     return rv
