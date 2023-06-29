@@ -1,32 +1,28 @@
-from __future__ import annotations
-from typing import Callable, Optional, Any
+from dataclasses import dataclass, field
 
 from renpy.display.transform import Transform
 
-_: Callable[[str], str]
-scopeDict: dict[str, Any]
+scopeDict: dict[str, object]
 
 """renpy
 init python:
 """
 
 
+@dataclass
 class SceneGallery:
-    def __init__(
-        self, title: str, image: str, label: str, scope: Optional[dict[str, Any]] = None
-    ) -> None:
-        self.title: str = title.upper()
-        self.idle_image = Transform(image, size=(362, 230), pos=(6, 16))
-        self.locked_image = Transform(image, blur=50, size=(362, 230), pos=(6, 16))
-        self.label: str = label
+    title: str
+    image: str
+    label: str
+    scope: dict[str, object] = field(default_factory=dict)
 
-        if scope is None:
-            self.scope: dict[str, Any] = {}
-        else:
-            self.scope: dict[str, Any] = scope
+    def __post_init__(self) -> None:
+        self.title = self.title.upper()
+        self.idle_image = Transform(self.image, size=(362, 230), pos=(6, 16))
+        self.locked_image = Transform(self.image, blur=50, size=(362, 230), pos=(6, 16))
 
 
-def update_scope(new_scope: dict[str, Any]) -> dict[str, Any]:
-    rv: dict[str, Any] = scopeDict.copy()
+def update_scope(new_scope: dict[str, object]) -> dict[str, object]:
+    rv: dict[str, object] = scopeDict.copy()
     rv.update(new_scope)
     return rv
