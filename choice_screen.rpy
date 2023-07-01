@@ -41,7 +41,7 @@ screen choice(items, seconds=3, fail_label=None):
                             
                             if walkthrough:
                                 for character in item.args:
-                                    text "[character.name!uit]" yalign 0.5
+                                    text "{color=#00FF00}[[[character.name]]" yalign 0.5
 
 
     if fail_label is not None:
