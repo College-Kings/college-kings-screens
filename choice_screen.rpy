@@ -20,22 +20,29 @@ screen choice(items, seconds=3, fail_label=None):
         yalign 1.0
         yoffset -50
 
-        for i in range(number_of_rows):
+        for i in range(0, len(items), 3):
             hbox:
                 xalign 0.5
                 spacing 25
 
-                for j in range(min(3, len(items) - i * 3)):
-                    $ item = items[i*3 + j]
-                    
+                for item in items[i:i+3]:
                     button:
                         idle_background "choice_button_idle"
                         hover_background "choice_button_hover"
                         action item.action
-                        padding (25, 35)
+                        padding (30, 35)
                         minimum (550, 131)
+                        
+                        hbox:
+                            align (0.5, 0.5)
+                            spacing 10
+                            
+                            text "[item.caption!uit]" yalign 0.5
+                            
+                            if walkthrough:
+                                for character in item.args:
+                                    text "[character.name!uit]" yalign 0.5
 
-                        text "[item.caption!uit]" align (0.5, 0.5)
 
     if fail_label is not None:
         use timer_bar(seconds)
