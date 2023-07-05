@@ -15,33 +15,30 @@ screen choice(items, seconds=3, fail_label=None):
     if show_reputation and len(items) > 1:
         use reputation_choice_hint
 
-    vbox:
-        xfill True
+    vpgrid:
+        cols min(3, len(items))
+        xalign 0.5
         yalign 1.0
         yoffset -50
+        spacing 25
 
-        for i in range(0, len(items), 3):
-            hbox:
-                xalign 0.5
-                spacing 25
-
-                for item in items[i:i+3]:
-                    button:
-                        idle_background "choice_button_idle"
-                        hover_background "choice_button_hover"
-                        action item.action
-                        padding (30, 35)
-                        minimum (550, 131)
-                        
-                        hbox:
-                            align (0.5, 0.5)
-                            spacing 10
-                            
-                            text "[item.caption!uit]" yalign 0.5
-                            
-                            if walkthrough:
-                                for character in item.args:
-                                    text "{color=#00FF00}[[[character.name]]" yalign 0.5
+        for item in items:
+            button:
+                idle_background "choice_button_idle"
+                hover_background "choice_button_hover"
+                action item.action
+                padding (30, 35)
+                minimum (550, 131)
+                
+                hbox:
+                    align (0.5, 0.5)
+                    spacing 10
+                    
+                    text "[item.caption!uit]" yalign 0.5
+                    
+                    if walkthrough:
+                        for character in item.args:
+                            text "{color=#00FF00}[[[character.name]]" yalign 0.5
 
 
     if fail_label is not None:
