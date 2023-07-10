@@ -42,7 +42,7 @@ screen choice(items, seconds=3, fail_label=None):
 
 
     if fail_label is not None:
-        use timer_bar(seconds)
+        bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve
 
         timer seconds:
             action Jump(fail_label)
