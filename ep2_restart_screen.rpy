@@ -4,12 +4,36 @@ screen ep2_restart(is_episode_3=False):
         xysize (758, 363)
         background "alert_background"
 
-        text "Episode 2 has been remade! Unfortunately, this means previous Episode 2 save files won't work with the updated version. By pressing 'OK' below you will begin Episode 2 anew.":
-            xsize 500
-            align (0.5, 0.5)
+        if is_episode_3:
+            text "We've reworked Episode 2 with the help of the community, previous Episode 2 save files will no longer work. While we strongly recommend replaying episode 2 and then episode 3, you can continue Episode 3 using default decisions in the Episode 2 rework.":
+                xsize 500
+                xalign 0.5
+                ypos 50
+                text_align 0.5
 
-        textbutton "OK":
-            align (0.5, 1.0)
-            yoffset -20
-            selected False
-            action Jump("ep2s1")
+        else:
+            text "We've reworked Episode 2 with the help of the community! Unfortunately, this means previous Episode 2 save files will no longer work. Please click 'Restart' below to restart the reworked Episode 2.":
+                xsize 500
+                xalign 0.5
+                ypos 50
+                text_align 0.5
+
+        if is_episode_3:
+            hbox:
+                spacing 100
+                align (0.5, 1.0)
+                yoffset -20
+
+                textbutton "Continue":
+                    action Return()
+
+                textbutton "Restart":
+                    action Jump("ep2s1")
+        
+        else:
+            textbutton "Restart":
+                align (0.5, 1.0)
+                yoffset -20
+                selected False
+                action Jump("ep2s1")
+
