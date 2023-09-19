@@ -65,6 +65,10 @@ screen quick_menu():
                 alternate Skip(fast=True, confirm=True)
 
             imagebutton:
+                idle "auto_forward_idle"
+                hover "auto_forward_hover"
+                selected_idle "auto_forward_hover"
+                selected_hover "auto_forward_idle"
                 action Preference("auto-forward", "toggle")
 
             imagebutton:
