@@ -61,7 +61,7 @@ screen team_credits():
 
     default marketing_team = (
         "{b}Adam{/b} - Marketing Manager",
-        "{b}Adrian{/b} - Marketing",
+        "{b}Adrien{/b} - Marketing",
         "{b}NicoMS{/b} - Marketing",
     )
 
