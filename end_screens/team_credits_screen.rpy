@@ -13,70 +13,97 @@ screen team_credits():
 
     default team_leads = (
         "{b}Messy17{/b} - Lead Transcriber & Renderer & Gameplay Engineer",
-        "{b}Mozzart{/b} - Lead Artist & Coordinator"
+        "{b}Mozzart{/b} - Art Director"
+        "{b}Spacestorm{/b} - QA Manager",
     )
 
     default art_team = (
         "{b}Mugi{/b} - Animator",
         "{b}TheFatLebowski{/b} - Animator",
-        "{b}day1patch{/b} - Renderer",
-        "{b}Fooxied{/b} - Renderer",
         "{b}Francois{/b} - Renderer",
+        "{b}Freja{/b} - Renderer",
         "{b}RogueRoach{/b} - Renderer",
         "{b}SexFM{/b} - Renderer",
-        "{b}zoneh69{/b} - Renderer",
+        "{b}Stefan{/b} - Renderer & Photoshopper",
+        "{b}Zoneh69{/b} - Renderer",
         "{b}Filip Jankovic{/b} - Photoshopper & UI/UX Designer",
-        "{b}stefan33{/b} - Photoshopper",
     )
 
     default audio_team = ()
-
-    default engineering_team = ("{b}Irish{/b} - Transcriber & Gameplay Engineer",)
-
-    default game_design_team = ()
-    
-    default narrative_team = (
-        "{b}Peter{/b} - Lead Writer",
-        "{b}Ozzy{/b} - Writer",
-        "{b}Nicki5617{/b} - Editor",
-    )
-
-    default qa_team = (
-        "{b}Rev{/b} - Quality Assurance Specialist",
-        "{b}Skepticalz{/b} - Quality Assurance Specialist",
-        "{b}Stefan{/b} - Quality Assurance Specialist",
-    )
-
-    default ui_ux_team = ()
 
     default business_team = ()
 
     default consumer_products_team = ()
 
+    default engineering_team = (
+        "{b}Irish{/b} - Transcriber & Gameplay Engineer",
+        "{b}Smudger{/b} - Transcriber",
+        "{b}StefanGaming{/b} - Gameplay Engineer"
+    )
+
+    default game_design_team = ()
+    
     default information_technology_team = ("{b}Jack Tomalin{/b} - Render Server Administrator",)
-
-    default marketing_team = (
-        "{b}Adrian{/b} - Marketing Manager",
-        "{b}NicoMS{/b} - Marketing",
-    )
-
-    default live_operations_team = (
-        "{b}Chaser{/b} - Community Administrator & Lead Support Team",
-        "{b}Oskin{/b} - Community Moderator & Support Team",
-        "{b}Asp{/b} - Community Moderator",
-        "{b}Lucass{/b} - Community Moderator",
-        "{b}Omni{/b} - Community Moderator",
-    )
 
     default internship_team = ()
 
-    default localization_team = ()
+    default leadership = ()
 
-    default additional = (
-        "{b}Chinay{/b} - For volunteer testing and contributing to the project",
+    default live_operations_team = (
+        "{b}Chaser{/b} - Community Administrator & Lead Support Team",
+        "{b}Asp{/b} - Community Moderator",
+        "{b}Lucass{/b} - Community Moderator",
+        "{b}Omni{/b} - Community Moderator",
+        "{b}Oskin{/b} - Community Moderator",
     )
 
-    default teams = (management, team_leads, art_team, audio_team, engineering_team, game_design_team, narrative_team, qa_team, ui_ux_team, business_team, consumer_products_team, information_technology_team, marketing_team, live_operations_team, internship_team, localization_team, additional)
+    default localization_team = ()
+
+    default narrative_team = (
+        "{b}Pete{/b} - Lead Writer",
+        "{b}Ozzy{/b} - Writer",
+        "{b}Nicki5617{/b} - Editor",
+    )
+
+    default production_team = ()
+
+    default marketing_team = (
+        "{b}Adam{/b} - Marketing Manager"
+        "{b}Adrian{/b} - Marketing",
+        "{b}NicoMS{/b} - Marketing",
+    )
+
+    default qa_team = (
+        "{b}Dux90{/b} - Quality Assurance",
+        "{b}EilDownTown{/b} - Quality Assurance",
+        "{b}Rev{/b} - Quality Assurance",
+        "{b}Sanjinn{/b} - Quality Assurance",
+        "{b}Skepticalz{/b} - Quality Assurance",
+        "{b}Zack{/b} - Quality Assurance",
+    )
+
+    default ui_ux_team = ()
+
+    default teams = (
+        management,
+        team_leads,
+        art_team,
+        audio_team,
+        business_team,
+        consumer_products_team,
+        engineering_team,
+        game_design_team,
+        information_technology_team,
+        internship_team,
+        leadership,
+        live_operations_team,
+        localization_team,
+        narrative_team,
+        production_team,
+        marketing_team,
+        qa_team,
+        ui_ux_team
+    )
 
     add image_path + "team_credits_background.webp"
 
