@@ -13,7 +13,7 @@ screen team_credits():
 
     default team_leads = (
         "{b}Messy17{/b} - Lead Transcriber & Renderer & Gameplay Engineer",
-        "{b}Mozzart{/b} - Art Director"
+        "{b}Mozzart{/b} - Art Director",
         "{b}Spacestorm{/b} - QA Manager",
     )
 
@@ -38,7 +38,7 @@ screen team_credits():
     default engineering_team = (
         "{b}Irish{/b} - Transcriber & Gameplay Engineer",
         "{b}Smudger{/b} - Transcriber",
-        "{b}StefanGaming{/b} - Gameplay Engineer"
+        "{b}StefanGaming{/b} - Gameplay Engineer",
     )
 
     default game_design_team = ()
@@ -48,14 +48,6 @@ screen team_credits():
     default internship_team = ()
 
     default leadership = ()
-
-    default live_operations_team = (
-        "{b}Chaser{/b} - Community Administrator & Lead Support Team",
-        "{b}Asp{/b} - Community Moderator",
-        "{b}Lucass{/b} - Community Moderator",
-        "{b}Omni{/b} - Community Moderator",
-        "{b}Oskin{/b} - Community Moderator",
-    )
 
     default localization_team = ()
 
@@ -68,7 +60,7 @@ screen team_credits():
     default production_team = ()
 
     default marketing_team = (
-        "{b}Adam{/b} - Marketing Manager"
+        "{b}Adam{/b} - Marketing Manager",
         "{b}Adrian{/b} - Marketing",
         "{b}NicoMS{/b} - Marketing",
     )
@@ -83,6 +75,14 @@ screen team_credits():
     )
 
     default ui_ux_team = ()
+
+    default live_operations_team = (
+        "{b}Chaser{/b} - Community Administrator & Lead Support Team",
+        "{b}Asp{/b} - Community Moderator",
+        "{b}Lucass{/b} - Community Moderator",
+        "{b}Omni{/b} - Community Moderator",
+        "{b}Oskin{/b} - Community Moderator",
+    )
 
     default teams = (
         management,
