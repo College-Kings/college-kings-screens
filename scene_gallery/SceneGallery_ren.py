@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 
 from renpy.display.transform import Transform
 
-global_replay_scope: dict[str, object]
+global_replay_scope: dict[str, object] = {}
 
 """renpy
 init python:
