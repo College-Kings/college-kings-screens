@@ -46,32 +46,6 @@ screen end_screen(support_link=""):
                     action Show("team_credits")
                     yalign 0.5
 
-        frame:
-            background "end_screen_frame_background"
-            xysize (910, 500)
-            padding (50, 50)
-            align (1.0, 0.5)
-
-            vbox:
-                yalign 1.0
-                spacing 15
-
-                text "CHECK OUT OUR NEW GAME: UNSCRIPTED" style "end_screen_header"
-
-                text "{b}Calling all CK lovers!{/b}\n\nWe are beyond excited to share our new game Unscripted with our community and we don't want you to miss out. Play the lead in a romantic comedy where you decide the fate of your relationships. Love, sex and a ton of hilarious adventures await! If you love College Kings, you'll love Unscripted, so come join the ride and get the game as soon as it's out!"
-
-                hbox:
-                    xalign 0.5
-                    spacing 15
-
-                    add "steam_logo" yalign 0.5
-                    
-                    textbutton "STEAM":
-                        action OpenURL("steam://openurl/https://store.steampowered.com/app/2156300/Unscripted/")
-                        yalign 0.5
-                        
-                    add "gui/common/arrow.webp" yalign 0.5
-
     on "show" action SetVariable("quick_menu", False)
     on "hide" action SetVariable("quick_menu", True)
     on "replace" action SetVariable("quick_menu", False)
