@@ -9,37 +9,48 @@
 screen choice(items, seconds=3, fail_label=None):
     style_prefix "choice"
 
-    default number_of_rows = math.ceil(len(items) / 3)
-
     # Show reputation
     if show_reputation and len(items) > 1:
         use reputation_choice_hint
 
-    vpgrid:
-        cols min(3, len(items))
+    vbox:
         xalign 0.5
         yalign 1.0
         yoffset -50
         spacing 25
 
-        for item in items:
-            button:
-                idle_background "choice_button_idle"
-                hover_background "choice_button_hover"
-                action item.action
-                padding (30, 35)
-                minimum (550, 131)
-                
-                hbox:
-                    align (0.5, 0.5)
-                    spacing 10
-                    
-                    text "[item.caption!uit]" yalign 0.5
-                    
-                    if walkthrough:
-                        for character in item.args:
-                            text "{color=#00FF00}[[[character.name]]" yalign 0.5
+        for i in range(0, len(items), 3):
+            hbox:
+                xalign 0.5
+                spacing 25
 
+                for item in items[i:min(i+3, len(items))]:
+                    button:
+                        idle_background "choice_button_idle"
+                        hover_background "choice_button_hover"
+                        action item.action
+                        padding (30, 35)
+                        minimum (550, 131)
+                        
+                        hbox:
+                            align (0.5, 0.5)
+                            spacing 10
+                            
+                            text "[item.caption!uit]" yalign 0.5
+                            
+                            if walkthrough:
+                                for character in item.args:
+                                    text "{color=#00FF00}[[[character.name]]" yalign 0.5
+
+
+    # vpgrid:
+    #     cols min(3, len(items))
+    #     
+    #     
+    #     
+    #     
+
+    #     for item in items:
 
     if fail_label is not None:
         bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve
