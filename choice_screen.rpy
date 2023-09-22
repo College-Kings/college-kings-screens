@@ -42,16 +42,6 @@ screen choice(items, seconds=3, fail_label=None):
                                 for character in item.args:
                                     text "{color=#00FF00}[[[character.name]]" yalign 0.5
 
-
-    # vpgrid:
-    #     cols min(3, len(items))
-    #     
-    #     
-    #     
-    #     
-
-    #     for item in items:
-
     if fail_label is not None:
         bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve
 
