@@ -28,7 +28,7 @@ screen path_builder_fraternity():
         hover "return_button_hover"
         action MainMenu(False, False)
         pos (50, 20)
-         
+
     add image_path + "/path_builder_step_3.webp" xalign 0.5 ypos 220
 
     text "Pick a fraternity" xalign 0.5 ypos 325

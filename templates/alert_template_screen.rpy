@@ -2,7 +2,7 @@ screen alert_template(message):
     zorder 200
     modal True
     style_prefix "alert"
-    
+
     frame:
         align (0.5, 0.5)
         minimum (758, 363)

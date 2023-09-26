@@ -42,7 +42,7 @@ screen history():
 
                 if not _history_list:
                     text _("The dialogue history is empty.")
-    
+
     textbutton _("Return"):
         action Return()
         xalign 0.5

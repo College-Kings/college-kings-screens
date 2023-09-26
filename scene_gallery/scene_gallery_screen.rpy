@@ -44,7 +44,7 @@ screen scene_gallery():
             bottom_margin 80
             mousewheel True
             allow_underfull True
-            
+
             for gallery_item in scene_gallery_items:
                 frame:
                     xysize (374, 300)

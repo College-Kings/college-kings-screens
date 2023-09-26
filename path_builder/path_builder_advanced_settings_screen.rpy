@@ -22,7 +22,7 @@ screen path_builder_advanced_settings():
         hover "return_button_hover"
         action Hide("path_builder_advanced_settings")
         align (0.015, 0.015)
-        
+
     hbox: 
         align (0.5, 0.5)
         spacing 100
@@ -32,10 +32,10 @@ screen path_builder_advanced_settings():
             text "Extras" color "#FFD166" size 50
 
             for name, actions in pb_advanced_options:
-                
+
                 hbox:
                     spacing 20
-                    
+
                     imagebutton:
                         idle image_path + "pb_tick.webp"
                         hover image_path + "pb_ticked.webp"
@@ -53,7 +53,7 @@ screen path_builder_advanced_settings():
             for name, actions in gameplay_options:
                 hbox:
                     spacing 20
-                    
+
                     imagebutton:
                         idle image_path + "pb_tick.webp"
                         hover image_path + "pb_ticked.webp"

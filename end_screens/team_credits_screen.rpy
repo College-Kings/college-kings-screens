@@ -42,7 +42,7 @@ screen team_credits():
     )
 
     default game_design_team = ()
-    
+
     default information_technology_team = ("{b}Jack Tomalin{/b} - Render Server Administrator",)
 
     default internship_team = ()

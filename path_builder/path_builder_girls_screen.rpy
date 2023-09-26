@@ -29,7 +29,7 @@ screen path_builder_girls():
         hover "return_button_hover"
         action MainMenu(False, False)
         pos (50, 20)
-         
+
     add image_path + "/path_builder_step_4.webp" xalign 0.5 ypos 220
 
     text "Pick which girls you want to be romantically involved with" xalign 0.5 ypos 325
@@ -47,7 +47,7 @@ screen path_builder_girls():
                 possible_relationships = pb_girls[girl_obj]["possible_relationships"]
                 relationship = CharacterService.get_relationship(girl_obj)
                 next_relationship = possible_relationships[(possible_relationships.index(relationship) + 1) % len(possible_relationships)]
-                
+
             button:
                 background "pink_idle"
                 hover_background "pink_hover"

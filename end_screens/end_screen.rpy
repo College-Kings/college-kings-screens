@@ -25,7 +25,7 @@ screen end_screen(support_link=""):
                 spacing 25
 
                 text "Get the latest updates on our Discord" style "end_screen_large_text" yalign 0.5
-                
+
                 imagebutton:
                     idle "discord_idle"
                     action OpenURL("https://discord.gg/collegekings")

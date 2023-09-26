@@ -42,7 +42,7 @@ screen preferences():
                         selected_background "blue_button_hover"
                         action Preference("display", "window")
                         padding (50, 20)
-                        
+
                         text "Window" align (0.5, 0.5)
 
                     button:
@@ -51,7 +51,7 @@ screen preferences():
                         selected_background "blue_button_hover"
                         action Preference("display", "fullscreen")
                         padding (40, 20)
-                        
+
                         text "Full Screen" align (0.5, 0.5)
 
             # Skip
@@ -118,7 +118,7 @@ screen preferences():
             # SHOW REPUTATION
             hbox:
                 xfill True
-                
+
                 text "Show Reputation" yalign 0.5
 
                 hbox:
@@ -146,7 +146,7 @@ screen preferences():
             # REAL LIFE MODE
             hbox:
                 xfill True
-                
+
                 text "Real Life Mode" yalign 0.5
 
                 hbox:
@@ -176,7 +176,7 @@ screen preferences():
             # TUTORIALS
             hbox:
                 xfill True
-                
+
                 text "Tutorials" yalign 0.5
 
                 hbox:
@@ -206,7 +206,7 @@ screen preferences():
             # Quick Menu
             hbox:
                 xfill True
-                
+
                 text "Show Quick Menu" yalign 0.5
 
                 hbox:
@@ -234,7 +234,7 @@ screen preferences():
             # DIAGNOSTIC DATA
             hbox:
                 xfill True
-                
+
                 text "Diagnostic Data Collection" yalign 0.5
 
                 hbox:
@@ -265,7 +265,7 @@ screen preferences():
             # MARKETING DATA
             hbox:
                 xfill True
-                
+
                 text "Marketing Data Collection" yalign 0.5
 
                 hbox:
@@ -367,9 +367,9 @@ screen preferences():
             insensitive_background Transform("blue_button_idle", matrixcolor=SaturationMatrix(0))
             action Show("translation_selector")
             padding (50, 25)
-            
+
             text "Translations" align (0.5, 0.5)
-        
+
         if is_CK2:
             button:
                 idle_background "blue_button_idle"
@@ -377,7 +377,7 @@ screen preferences():
                 selected_background "blue_button_hover"
                 action Show("connect_lovense")
                 padding (40, 25)
-                
+
                 text "Connect Lovense" align (0.5, 0.5)
 
         if _in_replay:
@@ -387,5 +387,5 @@ screen preferences():
                 selected_background "blue_button_hover"
                 action EndReplay()
                 padding (50, 25)
-                
+
                 text "End Replay" align (0.5, 0.5)

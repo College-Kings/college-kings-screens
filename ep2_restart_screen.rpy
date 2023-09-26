@@ -29,7 +29,7 @@ screen ep2_restart(is_episode_3=False):
 
                 textbutton "Restart":
                     action Jump("ep2s1")
-        
+
         else:
             textbutton "Restart":
                 align (0.5, 1.0)

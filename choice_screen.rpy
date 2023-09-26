@@ -31,13 +31,13 @@ screen choice(items, seconds=3, fail_label=None):
                         action item.action
                         padding (30, 35)
                         minimum (550, 131)
-                        
+
                         hbox:
                             align (0.5, 0.5)
                             spacing 10
-                            
+
                             text "[item.caption!uit]" yalign 0.5
-                            
+
                             if walkthrough:
                                 for character in item.args:
                                     text "{color=#00FF00}[[[character.name]]" yalign 0.5

@@ -10,10 +10,10 @@ screen translation_selector():
         align (0.5, 0.5)
         xysize (900, 375)
         padding (50, 50)
-        
+
         grid 2 1:
             spacing 100
             align (0.5, 0.5)
-            
+
             textbutton "English" action Language(None)
             textbutton "French" action Language("french")

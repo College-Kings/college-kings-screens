@@ -11,7 +11,7 @@ screen enter_save_name(slot):
     use save
 
     text "SAVE NAME:" pos (270, 240)
-    
+
     frame:
         xysize (1083, 99)
         pos (477, 210)

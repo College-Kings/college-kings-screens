@@ -22,8 +22,7 @@ screen warning_template(message, style="blue"):
             hbox:
                 xalign 0.5
                 spacing 20
-                
+
                 transclude
 
             null height 50
-            

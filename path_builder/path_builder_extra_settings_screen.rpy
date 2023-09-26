@@ -27,7 +27,7 @@ screen path_builder_extra_settings():
         hover "return_button_hover"
         action MainMenu(False, False)
         pos (50, 20)
-         
+
     add image_path + "/path_builder_step_5.webp" xalign 0.5 ypos 220
 
     text "Select extra settings to customize your playthrough." xalign 0.5 ypos 325

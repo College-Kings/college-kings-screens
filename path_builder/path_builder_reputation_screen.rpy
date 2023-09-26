@@ -28,7 +28,7 @@ screen path_builder_reputation():
         hover "return_button_hover"
         action MainMenu(False, False)
         pos (50, 20)
-         
+
     add image_path + "/path_builder_step_2.webp" xalign 0.5 ypos 220
 
     text "Pick your starting reputation" xalign 0.5 ypos 325
@@ -54,7 +54,7 @@ screen path_builder_reputation():
         xalign 0.5
         ypos 750
         spacing 20
-        
+
         imagebutton:
             idle image_path + "/pb_tick.webp"
             hover image_path + "/pb_ticked.webp"

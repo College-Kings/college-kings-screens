@@ -15,7 +15,7 @@ image steam_logo = "screens/end_screens/images/steam_logo.png"
 image end_screen_background:
     "screens/end_screens/images/end_01.webp" with dissolve
     pause 5.0
-    
+
     "screens/end_screens/images/end_02.webp" with dissolve
     pause 5.0
 

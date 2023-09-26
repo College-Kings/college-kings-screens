@@ -48,7 +48,7 @@ screen quick_menu():
                     selected_idle "rollback_hover"
                     selected_hover "rollback_idle"
                     action Rollback()
-            
+
             imagebutton:
                 idle "history_idle"
                 hover "history_hover"

@@ -23,7 +23,7 @@ screen input(prompt):
 
             hbox:
                 spacing 5
-                
+
                 text ">"
                 input id "input"
 

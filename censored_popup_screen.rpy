@@ -63,7 +63,7 @@ screen censored_popup(continue_label):
             action ShowMenu("preferences")
             xalign 0.5
             ypos 555
-            
+
     else:
         imagebutton:
             idle "censored_continue"
