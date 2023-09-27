@@ -111,7 +111,7 @@ screen main_menu():
             hover "gui/common/quit_hover.webp"
             action Quit()
 
-    text "v{}".format(config.version) align (1.0, 1.0) xoffset -20 color "#4e628f" size 30
+    text "v{} (ep{})".format(config.version, get_highest_ep()) align (1.0, 1.0) xoffset -20 color "#4e628f" size 30
 
     on "show" action [Play("music", audio.music.ck2.main_menu_theme_start), Queue("music", audio.music.ck2.main_menu_theme_loop, loop=True)]
 
