@@ -10,7 +10,7 @@ screen load():
         xsize 1450
         ypos 900
 
-    if is_CK2:
+    if not config.savedir.endswith("CollegeKings"):
         button:
             idle_background "purple_button_idle"
             hover_background "purple_button_hover"
