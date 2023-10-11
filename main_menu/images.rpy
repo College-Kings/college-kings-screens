@@ -1,0 +1,6 @@
+image main_menu_patreon_idle = "screens/images/main_menu/patreon_idle.png"
+image main_menu_patreon_hover = "screens/images/main_menu/patreon_hover.png"
+image main_menu_discord_idle = "screens/images/main_menu/discord_idle.png"
+image main_menu_discord_hover = "screens/images/main_menu/discord_hover.png"
+image main_menu_ep2_idle = "screens/main_menu/images/ep2_idle.png"
+image main_menu_ep2_hover = "screens/main_menu/images/ep2_hover.png"

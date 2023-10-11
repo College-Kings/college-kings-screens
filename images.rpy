@@ -18,13 +18,6 @@ image censored_skip_scene = Transform("screens/images/censored_popup/censored_sk
 image censored_skip_scene_hover = Transform("screens/images/censored_popup/censored_skip_scene_hover.webp", zoom=0.65)
 #endregion Censored Popup
 
-#region Main Menu
-image main_menu_patreon_idle = "screens/images/main_menu/patreon_idle.png"
-image main_menu_patreon_hover = "screens/images/main_menu/patreon_hover.png"
-image main_menu_discord_idle = "screens/images/main_menu/discord_idle.png"
-image main_menu_discord_hover = "screens/images/main_menu/discord_hover.png"
-#endregion Main Menu
-
 #region Settings
 image settings_background = "screens/images/settings/background.png"
 #endregion Settings

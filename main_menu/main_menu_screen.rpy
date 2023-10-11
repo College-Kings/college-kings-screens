@@ -28,12 +28,18 @@ screen main_menu():
     #     #         hover Transform(image_path + "unscripted_idle.png", matrixcolor=BrightnessMatrix(0.2))
     #     #         action OpenURL("steam://openurl/https://store.steampowered.com/app/2156300/Unscripted/")
 
-    if is_patreon():
-        imagebutton:
-            idle "main_menu_patreon_idle"
-            hover "main_menu_patreon_hover"
-            action OpenURL("https://www.patreon.com/collegekings")
-            pos (35, 35)
+    # if is_patreon():
+    #     imagebutton:
+    #         idle "main_menu_patreon_idle"
+    #         hover "main_menu_patreon_hover"
+    #         action OpenURL("https://www.patreon.com/collegekings")
+    #         pos (35, 35)
+
+    imagebutton:
+        idle "main_menu_ep2_idle"
+        hover "main_menu_ep2_hover"
+        action OpenURL("steam://openurl/https://store.steampowered.com/app/2100540/College_Kings_2__Episode_2_The_Pool_Party_Reworked/")
+        pos (35, 35)
 
     # Discord
     imagebutton:
