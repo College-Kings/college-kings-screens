@@ -46,22 +46,23 @@ screen scene_gallery():
             allow_underfull True
 
             for gallery_item in scene_gallery_items:
-                frame:
-                    xysize (374, 300)
-
-                    button:
-                        background gallery_item.idle_image
-                        insensitive_background gallery_item.locked_image
-                        idle_foreground "scene_gallery_button_idle"
-                        hover_foreground "scene_gallery_button_hover"
-                        insensitive_foreground "scene_gallery_button_idle"
-                        action Replay(gallery_item.label, scope=update_scope(gallery_item.scope), locked=persistent.gallery_lock)
+                if renpy.has_label(gallery_item.label):
                     frame:
-                        xysize (250, 49)
-                        xalign 0.5
-                        ypos 224
+                        xysize (374, 300)
 
-                        text gallery_item.title align (0.5, 0.5)
+                        button:
+                            background gallery_item.idle_image
+                            insensitive_background gallery_item.locked_image
+                            idle_foreground "scene_gallery_button_idle"
+                            hover_foreground "scene_gallery_button_hover"
+                            insensitive_foreground "scene_gallery_button_idle"
+                            action Replay(gallery_item.label, scope=update_scope(gallery_item.scope), locked=persistent.gallery_lock)
+                        frame:
+                            xysize (250, 49)
+                            xalign 0.5
+                            ypos 224
+
+                            text gallery_item.title align (0.5, 0.5)
 
             null
 
