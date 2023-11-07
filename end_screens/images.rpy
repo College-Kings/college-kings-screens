@@ -29,3 +29,7 @@ image end_screen_background:
     pause 5.0
 
     repeat
+
+image patreon_credits_background = "screens/end_screens/images/patreon_credits_background.webp"
+image support_development_idle = "screens/end_screens/images/support_development_idle.webp"
+image support_development_hover = "screens/end_screens/images/support_development_hover.webp"

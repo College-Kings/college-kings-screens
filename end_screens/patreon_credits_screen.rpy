@@ -3,9 +3,7 @@ screen patreon_credits(support_link):
     modal True
     style_prefix "patreon_credits"
 
-    default image_path = "gui/end_screen/"
-
-    add image_path + "patreon_credits_background.webp"
+    add "patreon_credits_background"
 
     viewport id "vp":
         mousewheel True
@@ -1270,8 +1268,8 @@ screen patreon_credits(support_link):
         value YScrollValue("vp")
 
     imagebutton:
-        idle image_path + "support_development_idle.webp"
-        hover image_path + "support_development_hover.webp"
+        idle "support_development_idle"
+        hover "support_development_hover"
         action OpenURL(support_link)
         xalign 0.5
         ypos 735
@@ -1280,14 +1278,14 @@ screen patreon_credits(support_link):
         align (0.5, 1.0)
 
         imagebutton:
-            idle image_path + "main_menu_idle.webp"
-            hover image_path + "main_menu_hover.webp"
+            idle "main_menu_idle"
+            hover "main_menu_hover"
             action MainMenu()
             yalign 0.5
 
         imagebutton:
-            idle image_path + "team_idle.webp"
-            hover image_path + "team_hover.webp"
+            idle "team_idle"
+            hover "team_hover"
             action Show("team_credits")
             yalign 0.5
 
