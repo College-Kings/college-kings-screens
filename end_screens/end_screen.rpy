@@ -5,7 +5,7 @@ screen end_screen(support_link=""):
 
     add "end_screen_background"
 
-    textbutton "COLLEGE KINGS EPISODE 4 IS CURRENTLY IN DEVELOPMENT":
+    textbutton "COLLEGE KINGS 2 EPISODE 4 IS CURRENTLY IN DEVELOPMENT":
         text_style "end_screen_title"
         xalign 0.5
         ypos 100
