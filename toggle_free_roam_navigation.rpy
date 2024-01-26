@@ -10,6 +10,10 @@ screen toggle_free_roam_navigation():
             style "navigation_hint"
             text_style "navigation_hint_text"
 
+    on "show" action Hide("phone_icon")
+    on "replace" action Hide("phone_icon")
+    on "hide" action Show("phone_icon")
+    on "replaced" action Show("phone_icon")
 
 style navigation_hint is button:
     xalign 1.0
