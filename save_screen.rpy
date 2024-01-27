@@ -5,10 +5,7 @@ screen save():
 
 
 screen enter_save_name(slot):
-    tag menu
     style_prefix "save"
-
-    use save
 
     text "SAVE NAME:" pos (270, 240)
 
@@ -18,7 +15,6 @@ screen enter_save_name(slot):
         background "gui/file_slots/save_name.webp"
 
         input:
-            align (0.5, 0.5)
             default save_name
             copypaste True
             value VariableInputValue("save_name")
@@ -27,7 +23,7 @@ screen enter_save_name(slot):
         imagebutton:
             idle "gui/file_slots/save_game_idle.webp"
             hover "gui/file_slots/save_game_hover.webp"
-            action [Show("save"), FileAction(slot)]
+            action [Hide(), FileAction(slot), Show("save")]
             align (1.0, 0.5)
             xoffset 13
 
