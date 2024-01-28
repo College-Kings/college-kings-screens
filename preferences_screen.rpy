@@ -384,7 +384,7 @@ screen preferences():
                 idle_background "blue_button_idle"
                 hover_background "blue_button_hover"
                 selected_background "blue_button_hover"
-                action Show("connect_lovense")
+                action Call("show_lovense_screen")
                 padding (40, 25)
 
                 text "Connect Lovense" align (0.5, 0.5)
