@@ -16,7 +16,7 @@ screen scene_gallery():
         pos (120, 80)
 
     # Gallery unlock
-    if is_deluxe():
+    if is_deluxe() or not is_CK2:
         frame:
             xalign 1.0
             xoffset -50
