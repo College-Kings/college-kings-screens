@@ -17,7 +17,6 @@ screen main_menu():
     add "main_menu_background"
 
     # if not is_patreon():
-    #     pass
     #     # vbox:
     #     #     pos (50, 25)
     #     #     spacing 25
