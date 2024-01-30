@@ -33,7 +33,6 @@ screen scene_gallery():
 
     fixed:
         pos (114, 178)
-        ypos 178
         xysize (1688, 830)
 
         vpgrid id "vpg":
