@@ -22,7 +22,7 @@ class SceneGallery:
         return self._title.upper()
 
     @property
-    def idle_image(self) -> Displayable:
+    def idle_image(self) -> "Displayable":
         try:
             return self._idle_image
         except AttributeError:
@@ -30,11 +30,11 @@ class SceneGallery:
             return self._idle_image
 
     @idle_image.setter
-    def idle_image(self, value: Displayable) -> None:
+    def idle_image(self, value: "Displayable") -> None:
         self._idle_image: Displayable = value
 
     @property
-    def locked_image(self) -> Displayable:
+    def locked_image(self) -> "Displayable":
         try:
             return self._locked_image
         except AttributeError:
@@ -44,7 +44,7 @@ class SceneGallery:
             return self._locked_image
 
     @locked_image.setter
-    def locked_image(self, value: Displayable) -> None:
+    def locked_image(self, value: "Displayable") -> None:
         self._locked_image: Displayable = value
 
 
