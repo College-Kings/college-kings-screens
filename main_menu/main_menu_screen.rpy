@@ -9,8 +9,8 @@ screen main_menu():
     style_prefix "main_menu"
 
     python:
-        with renpy.open_file("whats_new/whats-new.txt", "utf-8") as f:
-            what_new_content = f.read()
+        with renpy.open_file("whats_new/whats-new.json", "utf-8") as f:
+            what_new_content = json.load(f)
 
     default image_path = "gui/main_menu/"
 
