@@ -18,9 +18,8 @@ screen main_menu():
     add "main_menu_background"
 
     imagebutton:
-        idle "main_menu_ep2_idle"
-        hover "main_menu_ep2_hover"
-        action OpenURL("https://store.steampowered.com/app/2100540/College_Kings_2__Episode_2_The_Pool_Party_Reworked/")
+        idle "main_menu_ep4_idle"
+        action OpenURL("https://store.steampowered.com/app/2725540/College_Kings_2__Episode_4_Moving_Out/")
         pos (35, 35)
 
     # Discord

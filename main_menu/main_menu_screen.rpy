@@ -16,28 +16,9 @@ screen main_menu():
 
     add "main_menu_background"
 
-    # if not is_patreon():
-    #     # vbox:
-    #     #     pos (50, 25)
-    #     #     spacing 25
-
-    #     #     # Unscripted
-    #     #     imagebutton:
-    #     #         idle image_path + "unscripted_idle.png"
-    #     #         hover Transform(image_path + "unscripted_idle.png", matrixcolor=BrightnessMatrix(0.2))
-    #     #         action OpenURL("steam://openurl/https://store.steampowered.com/app/2156300/Unscripted/")
-
-    # if is_patreon():
-    #     imagebutton:
-    #         idle "main_menu_patreon_idle"
-    #         hover "main_menu_patreon_hover"
-    #         action OpenURL("https://www.patreon.com/collegekings")
-    #         pos (35, 35)
-
     imagebutton:
-        idle "main_menu_ep2_idle"
-        hover "main_menu_ep2_hover"
-        action OpenURL("steam://openurl/https://store.steampowered.com/app/2100540/College_Kings_2__Episode_2_The_Pool_Party_Reworked/")
+        idle "main_menu_ep4_idle"
+        action OpenURL("steam://openurl/https://store.steampowered.com/app/2725540/College_Kings_2__Episode_4_Moving_Out/")
         pos (35, 35)
 
     # Discord
