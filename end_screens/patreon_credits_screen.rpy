@@ -1286,7 +1286,7 @@ screen patreon_credits(support_link):
         imagebutton:
             idle "team_idle"
             hover "team_hover"
-            action Show("team_credits")
+            action Show("team_credits", None, support_link)
             yalign 0.5
 
     on "show" action [SetVariable("quick_menu", False), Play("music", "audio/music/common/vocal.mp3")]

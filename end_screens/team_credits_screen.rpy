@@ -1,4 +1,4 @@
-screen team_credits():
+screen team_credits(support_link):
     tag end_screen
     modal True
     style_prefix "team_credits"
@@ -141,7 +141,7 @@ screen team_credits():
         imagebutton:
             idle Transform("gui/common/credits_idle.webp", zoom=0.72)
             hover Transform("gui/common/credits_hover.webp", zoom=0.72)
-            action Show("patreon_credits")
+            action Show("patreon_credits", None, support_link)
             yalign 0.5
 
     on "show" action SetVariable("quick_menu", False)
