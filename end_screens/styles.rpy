@@ -1,6 +1,3 @@
-style end_screen_title is montserrat_extra_bold_64:
-    text_align 0.5
-
 style end_screen_header is text:
     font "fonts/BebasNeue-Regular.ttf"
     size 32
