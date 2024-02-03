@@ -26,27 +26,27 @@ screen quick_menu():
 
 style window:
     variant "small"
-    background "gui/phone/textbox.png"
+    background "gui/phone/textbox.webp"
 
 style radio_button:
     variant "small"
-    foreground "gui/phone/button/radio_[prefix_]foreground.png"
+    foreground "gui/phone/button/radio_[prefix_]foreground.webp"
 
 style check_button:
     variant "small"
-    foreground "gui/phone/button/check_[prefix_]foreground.png"
+    foreground "gui/phone/button/check_[prefix_]foreground.webp"
 
 style nvl_window:
     variant "small"
-    background "gui/phone/nvl.png"
+    background "gui/phone/nvl.webp"
 
 style main_menu_frame:
     variant "small"
-    background "gui/phone/overlay/main_menu.png"
+    background "gui/phone/overlay/main_menu.webp"
 
 style game_menu_outer_frame:
     variant "small"
-    background "gui/phone/overlay/game_menu.png"
+    background "gui/phone/overlay/game_menu.webp"
 
 style game_menu_navigation_frame:
     variant "small"
@@ -63,38 +63,38 @@ style pref_vbox:
 style bar:
     variant "small"
     ysize 38
-    left_bar Frame("gui/phone/bar/left.png", Borders(6, 6, 6, 6), tile=False)
-    right_bar Frame("gui/phone/bar/right.png", Borders(6, 6, 6, 6), tile=False)
+    left_bar Frame("gui/phone/bar/left.webp", Borders(6, 6, 6, 6), tile=False)
+    right_bar Frame("gui/phone/bar/right.webp", Borders(6, 6, 6, 6), tile=False)
 
 style vbar:
     variant "small"
     xsize 38
-    top_bar Frame("gui/phone/bar/top.png", Borders(6, 6, 6, 6), tile=False)
-    bottom_bar Frame("gui/phone/bar/bottom.png", Borders(6, 6, 6, 6), tile=False)
+    top_bar Frame("gui/phone/bar/top.webp", Borders(6, 6, 6, 6), tile=False)
+    bottom_bar Frame("gui/phone/bar/bottom.webp", Borders(6, 6, 6, 6), tile=False)
 
 style scrollbar:
     variant "small"
     ysize 18
-    base_bar Frame("gui/phone/scrollbar/horizontal_[prefix_]bar.png", Borders(6, 6, 6, 6), tile=False)
-    thumb Frame("gui/phone/scrollbar/horizontal_[prefix_]thumb.png", Borders(6, 6, 6, 6), tile=False)
+    base_bar Frame("gui/phone/scrollbar/horizontal_[prefix_]bar.webp", Borders(6, 6, 6, 6), tile=False)
+    thumb Frame("gui/phone/scrollbar/horizontal_[prefix_]thumb.webp", Borders(6, 6, 6, 6), tile=False)
 
 style vscrollbar:
     variant "small"
     xsize 18
-    base_bar Frame("gui/phone/scrollbar/vertical_[prefix_]bar.png", Borders(6, 6, 6, 6), tile=False)
-    thumb Frame("gui/phone/scrollbar/vertical_[prefix_]thumb.png", Borders(6, 6, 6, 6), tile=False)
+    base_bar Frame("gui/phone/scrollbar/vertical_[prefix_]bar.webp", Borders(6, 6, 6, 6), tile=False)
+    thumb Frame("gui/phone/scrollbar/vertical_[prefix_]thumb.webp", Borders(6, 6, 6, 6), tile=False)
 
 style slider:
     variant "small"
     ysize 38
-    base_bar Frame("gui/phone/slider/horizontal_[prefix_]bar.png", Borders(6, 6, 6, 6), tile=False)
-    thumb "gui/phone/slider/horizontal_[prefix_]thumb.png"
+    base_bar Frame("gui/phone/slider/horizontal_[prefix_]bar.webp", Borders(6, 6, 6, 6), tile=False)
+    thumb "gui/phone/slider/horizontal_[prefix_]thumb.webp"
 
 style vslider:
     variant "small"
     xsize 38
-    base_bar Frame("gui/phone/slider/vertical_[prefix_]bar.png", Borders(6, 6, 6, 6), tile=False)
-    thumb "gui/phone/slider/vertical_[prefix_]thumb.png"
+    base_bar Frame("gui/phone/slider/vertical_[prefix_]bar.webp", Borders(6, 6, 6, 6), tile=False)
+    thumb "gui/phone/slider/vertical_[prefix_]thumb.webp"
 
 style slider_vbox:
     variant "small"
