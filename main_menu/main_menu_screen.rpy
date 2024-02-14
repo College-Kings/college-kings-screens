@@ -105,4 +105,4 @@ screen main_menu():
         on "show" action Show("whats_new", data=what_new_content)
 
     if config_debug:
-        timer 0.1 action Start()
+        timer 0.1 action Start("ep4_start")
