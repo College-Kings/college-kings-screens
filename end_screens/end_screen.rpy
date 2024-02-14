@@ -63,3 +63,6 @@ screen end_screen(support_link):
     on "hide" action SetVariable("quick_menu", True)
     on "replace" action SetVariable("quick_menu", False)
     on "replaced" action SetVariable("quick_menu", True)
+
+    if config_debug:
+        timer 0.1 action MainMenu(confirm=False)
