@@ -19,6 +19,8 @@ screen enter_save_name(slot):
             copypaste True
             value VariableInputValue("save_name")
             allow " .,_-0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+            yalign 0.5
+            xoffset 20
 
         imagebutton:
             idle "gui/file_slots/save_game_idle.webp"
