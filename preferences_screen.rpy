@@ -379,6 +379,16 @@ screen preferences():
 
             text "Translations" align (0.5, 0.5)
 
+        button:
+            idle_background "blue_button_idle"
+            hover_background "blue_button_hover"
+            selected_background "blue_button_hover"
+            insensitive_background Transform("blue_button_idle", matrixcolor=SaturationMatrix(0))
+            action Call("change_name")
+            padding (50, 25)
+
+            text "Change Name" align (0.5, 0.5)
+
         if is_CK2:
             button:
                 idle_background "blue_button_idle"
