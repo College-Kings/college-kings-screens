@@ -80,7 +80,7 @@ screen team_credits(support_link):
         "{b}Chaser{/b} - Community Administrator & Lead Support Team",
         "{b}Asp{/b} - Community Moderator",
         "{b}Lucass{/b} - Community Moderator",
-        "{b}Omni{/b} - Community Moderator",
+        "{b}Onni{/b} - Community Moderator",
         "{b}Oskin{/b} - Community Moderator",
     )
 
