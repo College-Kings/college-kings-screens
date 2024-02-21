@@ -8,14 +8,16 @@
 
 screen choice(items, seconds=3, fail_label=None):
     style_prefix "choice"
+    
+    default timer = 0.0
+    default fail_action = False
 
     # Show reputation
     if show_reputation and len(items) > 1:
         use reputation_choice_hint
 
     vbox:
-        xalign 0.5
-        yalign 1.0
+        align (0.5, 1.0)
         yoffset -50
         spacing 25
 
@@ -25,28 +27,36 @@ screen choice(items, seconds=3, fail_label=None):
                 spacing 25
 
                 for item in items[i:min(i+3, len(items))]:
-                    button:
-                        idle_background "choice_button_idle"
-                        hover_background "choice_button_hover"
-                        action item.action
-                        padding (30, 35)
-                        minimum (550, 131)
+                    python:
+                        show_after = item.kwargs.get("show_after", 0)
+                        hide_after = item.kwargs.get("hide_after", -1)
+                        if item.kwargs.get("fail", False):
+                            fail_action = item.action
 
-                        hbox:
-                            align (0.5, 0.5)
-                            spacing 10
+                    if show_after > timer or (hide_after > 0 and hide_after < timer):
+                        button:
+                            idle_background "choice_button_idle"
+                            hover_background "choice_button_hover"
+                            action item.action
+                            padding (30, 35)
+                            minimum (550, 131)
 
-                            text "[item.caption!uit]" yalign 0.5
+                            hbox:
+                                align (0.5, 0.5)
+                                spacing 10
 
-                            if walkthrough:
-                                for character in item.args:
-                                    text "{color=#00FF00}[[[character.name]]" yalign 0.5
+                                text "[item.caption!uit]" yalign 0.5
 
-    if fail_label is not None:
+                                if walkthrough:
+                                    for character in item.args:
+                                        text "{color=#00FF00}[[[character.name]]" yalign 0.5
+
+    if fail_label is not None or fail_action:
         bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve
 
-        timer seconds:
-            action Jump(fail_label)
+        timer seconds action fail_action
+
+    timer 0.25 repeat True action IncrementScreenVariable("timer", 0.25)
 
     if config_debug:
         $ item = renpy.random.choice(items)
@@ -58,12 +68,3 @@ screen choice(items, seconds=3, fail_label=None):
     on "replaced" action Show("phone_icon")
 
 style choice_text is bebas_neue_30
-
-## When this is true, menu captions will be spoken by the narrator. When false,
-## menu captions will be displayed as empty buttons.
-define config.narrator_menu = True
-
-
-style choice_vbox is vbox
-style choice_button is button
-style choice_button_text is button_text
