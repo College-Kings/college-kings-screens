@@ -33,7 +33,7 @@ screen choice(items, seconds=3, fail_label=None):
                         if item.kwargs.get("fail", False):
                             fail_action = item.action
 
-                    if show_after > timer or (hide_after > 0 and hide_after < timer):
+                    if show_after <= timer and (hide_after > timer or hide_after == -1):
                         button:
                             idle_background "choice_button_idle"
                             hover_background "choice_button_hover"
@@ -54,7 +54,10 @@ screen choice(items, seconds=3, fail_label=None):
     if fail_label is not None or fail_action:
         bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve
 
+    if fail_action:
         timer seconds action fail_action
+    elif fail_label is not None:
+        timer seconds action Jump(fail_label)
 
     timer 0.25 repeat True action IncrementScreenVariable("timer", 0.25)
 
