@@ -35,7 +35,7 @@ screen path_builder_starting_location():
 
     text "Pick your starting location" xalign 0.5 ypos 325
 
-    grid 4 1:
+    grid len(pb_starting_locations) 1:
         xspacing 10
         xalign 0.5
         ypos 450
