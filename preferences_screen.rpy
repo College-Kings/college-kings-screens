@@ -355,7 +355,8 @@ screen preferences():
                 thumb_offset 20
 
 
-    grid 2 2:
+    vpgrid:
+        rows 2
         pos (987, 550)
         spacing 20
         allow_underfull True
