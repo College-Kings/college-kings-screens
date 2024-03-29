@@ -28,9 +28,9 @@ screen choice(items, seconds=3, fail_label=None):
 
                 for item in items[i:min(i+3, len(items))]:
                     python:
-                        show_after = item.kwargs.get("show_after", 0)
-                        hide_after = item.kwargs.get("hide_after", -1)
-                        if item.kwargs.get("fail", False):
+                        show_after = item.kwargs.pop("show_after", 0)
+                        hide_after = item.kwargs.pop("hide_after", -1)
+                        if item.kwargs.pop("fail", False):
                             fail_action = item.action
 
                     if show_after <= timer and (hide_after > timer or hide_after == -1):
@@ -48,8 +48,11 @@ screen choice(items, seconds=3, fail_label=None):
                                 text "[item.caption!uit]" yalign 0.5
 
                                 if walkthrough:
-                                    for character in item.args:
-                                        text "{color=#00FF00}[[[character.name]]" yalign 0.5
+                                    for arg, is_positive in item.kwargs.items():
+                                        if is_positive:
+                                            text "{color=#00FF00}[[[arg]]" yalign 0.5
+                                        else:
+                                            text "{color=#FF0000}[[[arg]]" yalign 0.5
 
     if fail_label is not None or fail_action:
         bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve
