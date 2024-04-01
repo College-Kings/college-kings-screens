@@ -58,6 +58,9 @@ screen file_slots(title):
                         action FileAction(slot)
                     xysize (config.thumbnail_width, config.thumbnail_height)
 
+                    if config.developer:
+                        text FileJson(slot, key="_version") or ""
+
                     vbox:
                         align (0.5, 1.0)
 
