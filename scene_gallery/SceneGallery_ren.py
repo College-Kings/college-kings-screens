@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from renpy.display.core import Displayable
+from renpy.display.displayable import Displayable
 
 from renpy.display.transform import Transform
 
