@@ -33,10 +33,6 @@ screen choice(items, seconds=3, fail_label=None):
                         if item.kwargs.pop("fail", False):
                             fail_action = item.action
 
-                        positive = "{color=#0F0}"
-                        neutral = "{color=#FFF}"
-                        negative = "{color=#F00}"
-
                     if show_after <= timer and (hide_after > timer or hide_after == -1):
                         button:
                             idle_background "choice_button_idle"
@@ -49,25 +45,31 @@ screen choice(items, seconds=3, fail_label=None):
                                 align (0.5, 0.5)
                                 spacing 10
 
-                                $ arg1 = item.args[0] if item.args else None
+                                if walkthrough:
+                                    $ positives = []
+                                    $ neutrals = []
+                                    $ negatives = []
+                                    $ arg1 = item.args[0] if item.args else None
 
-                                if arg1 is True:
-                                    text "[positive][item.caption!uit]" yalign 0.5
-                                elif arg1 is False:
-                                    text "[negative][item.caption!uit]" yalign 0.5
+                                    if arg1 is True:
+                                        text "{color=#0f0}[item.caption!uit]" yalign 0.5
+                                    elif arg1 is False:
+                                        text "{color=#f00}[item.caption!uit]" yalign 0.5
+                                    else:
+                                        text "[item.caption!uit]" yalign 0.5
+
+                                    for arg, state in item.kwargs.items():
+                                        if state > 0:
+                                            $ positives.append("{{color={}}}[[+{}]".format(interpolate_color_to_white("#00ff00", state), arg))
+                                        elif state < 0: 
+                                            $ negatives.append("{{color={}}}[[-{}]".format(interpolate_color_to_white("#ff0000", state), arg))
+                                        else:
+                                            $ neutrals.append("{{color=#fff}}{}".format(arg))
+
+                                    text " ".join(("".join(positives), "".join(neutrals), "".join(negatives))) yalign 0.5
+
                                 else:
                                     text "[item.caption!uit]" yalign 0.5
-
-                                if walkthrough:                                    
-                                    for arg, state in item.kwargs.items():
-                                        if state is True:
-                                            $ positive += "[{}]".format(arg)
-                                        elif state is False:
-                                            $ negative += "[{}]".format(arg)
-                                        else:
-                                            $ neutral += "[{}]".format(arg)
-
-                                    text "[positive] [neutral] [negative]"  yalign 0.5
 
     if fail_label is not None or fail_action:
         bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve
