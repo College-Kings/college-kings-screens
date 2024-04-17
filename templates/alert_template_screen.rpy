@@ -21,3 +21,6 @@ screen alert_template(message):
                 spacing 20
 
                 transclude
+
+style alert_text is bebas_neue_30:
+    text_align 0.5
