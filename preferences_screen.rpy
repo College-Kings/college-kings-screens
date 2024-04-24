@@ -390,15 +390,14 @@ screen preferences():
 
             text "Change Name" align (0.5, 0.5)
 
-        if is_CK2:
-            button:
-                idle_background "blue_button_idle"
-                hover_background "blue_button_hover"
-                selected_background "blue_button_hover"
-                action Call("show_lovense_screen")
-                padding (40, 25)
+        button:
+            idle_background "blue_button_idle"
+            hover_background "blue_button_hover"
+            selected_background "blue_button_hover"
+            action [LovenseQRCodeDownload(), ShowMenu("connect_lovense")]
+            padding (40, 25)
 
-                text "Connect Lovense" align (0.5, 0.5)
+            text "Connect Lovense" align (0.5, 0.5)
 
         if _in_replay:
             button:
