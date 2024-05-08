@@ -18,7 +18,7 @@ screen main_menu():
 
     imagebutton:
         idle "main_menu_ep4_idle"
-        action OpenURL("steam://openurl/https://store.steampowered.com/app/2725540/College_Kings_2__Episode_4_Moving_Out/")
+        action OpenURL("https://store.steampowered.com/app/2725540/College_Kings_2__Episodes_4__5_Moving_Out/")
         pos (35, 35)
 
     # Discord
