@@ -1,9 +1,11 @@
-screen team_credits(support_link):
+screen team_credits(support_link=None):
     tag end_screen
     modal True
     style_prefix "team_credits"
-
     default image_path = "screens/end_screens/images/"
+
+    if support_link is None:
+        $ support_link = "https://store.steampowered.com/app/1924480/"
 
     default management = (
         "{b}UndergradSteve{/b} - Game Creator",
