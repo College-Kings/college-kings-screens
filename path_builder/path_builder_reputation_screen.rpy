@@ -56,9 +56,9 @@ screen path_builder_reputation():
         spacing 20
 
         imagebutton:
-            idle image_path + "/pb_tick.webp"
-            hover image_path + "/pb_ticked.webp"
-            selected_idle image_path + "/pb_ticked.webp"
+            idle "path_bulder_tick"
+            hover "path_bulder_ticked"
+            selected_idle "path_bulder_ticked"
             action ToggleVariable("locked_reputation")
 
         text "Lock Reputation (Prevent it from changing)":

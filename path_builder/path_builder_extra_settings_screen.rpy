@@ -3,10 +3,9 @@ screen path_builder_extra_settings():
     modal True
     style_prefix "path_builder"
 
-    default image_path = "screens/path_builder/images"
 
     add "path_builder_background"
-    add image_path + "/path_builder_box_background.webp" align (0.5, 0.5)
+    add "path_builder_box_background" align (0.5, 0.5)
 
     button:
         idle_background "path_builder_button_idle"
@@ -28,7 +27,7 @@ screen path_builder_extra_settings():
         action MainMenu(False, False)
         pos (50, 20)
 
-    add image_path + "/path_builder_step_5.webp" xalign 0.5 ypos 220
+    add "path_builder_step_5" xalign 0.5 ypos 220
 
     text "Select extra settings to customize your playthrough." xalign 0.5 ypos 325
 
@@ -43,9 +42,9 @@ screen path_builder_extra_settings():
                 spacing 10
 
                 imagebutton:
-                    idle image_path + "/pb_tick.webp"
-                    hover image_path + "/pb_ticked.webp"
-                    selected_idle image_path + "/pb_ticked.webp"
+                    idle "path_bulder_tick"
+                    hover "path_bulder_ticked"
+                    selected_idle "path_bulder_ticked"
                     action actions
 
                 text name ypos -5
@@ -56,10 +55,10 @@ screen path_builder_extra_settings():
         yoffset -50
 
         imagebutton:
-            idle image_path + "/back.webp"
+            idle "path_builder_back_idle"
             action Show("path_builder_girls")
 
         imagebutton:
-            idle image_path + "/continue.webp"
-            insensitive Transform(image_path + "/continue.webp", matrixcolor=SaturationMatrix(0))
+            idle "path_builder_continue_idle"
+            insensitive "path_builder_continue_insensitive"
             action [SetVariable("path_builder", True), SetVariable("quick_menu", True), Jump(pb_start_label)]

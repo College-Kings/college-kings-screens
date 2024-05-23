@@ -2,7 +2,6 @@ screen path_builder_advanced_settings():
     zorder 100
     modal True
 
-    default image_path = "screens/path_builder/images/"
     if is_CK2:
         default gameplay_options = (
             ("Show preferred reputation for each girl (in Step 04)", ToggleVariable("pb_reputation_shown")),
@@ -15,7 +14,7 @@ screen path_builder_advanced_settings():
             ("Show a notification whenever you gain reputation points", ToggleVariable("pb_reputation_notification"))
         )
 
-    add image_path + "path_builder_background.webp"
+    add "path_builder_background"
 
     imagebutton:
         idle "return_button_idle"
@@ -37,9 +36,9 @@ screen path_builder_advanced_settings():
                     spacing 20
 
                     imagebutton:
-                        idle image_path + "pb_tick.webp"
-                        hover image_path + "pb_ticked.webp"
-                        selected_idle image_path + "pb_ticked.webp"
+                        idle "path_bulder_tick"
+                        hover "path_bulder_ticked"
+                        selected_idle "path_bulder_ticked"
                         action actions
 
                     text name
@@ -55,9 +54,9 @@ screen path_builder_advanced_settings():
                     spacing 20
 
                     imagebutton:
-                        idle image_path + "pb_tick.webp"
-                        hover image_path + "pb_ticked.webp"
-                        selected_idle image_path + "pb_ticked.webp"
+                        idle "path_bulder_tick"
+                        hover "path_bulder_ticked"
+                        selected_idle "path_bulder_ticked"
                         action actions
 
                     text name:

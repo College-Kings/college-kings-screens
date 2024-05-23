@@ -1,15 +1,15 @@
 init python:
     pb_start_label = ""
 
+    PB_ROWS = 2
+
 screen path_builder_starting_location():
     tag path_builder
     modal True
     style_prefix "path_builder"
 
-    default image_path = "screens/path_builder/images"
-
     add "path_builder_background"
-    add image_path + "/path_builder_box_background.webp" align (0.5, 0.5)
+    add "path_builder_box_background" align (0.5, 0.5)
 
     button:
         idle_background "path_builder_button_idle"
@@ -31,14 +31,15 @@ screen path_builder_starting_location():
         action MainMenu(False, False)
         pos (50, 20)
 
-    add image_path + "/path_builder_step_1.webp" xalign 0.5 ypos 220
+    add "path_builder_step_1" xalign 0.5 ypos 220
 
-    text "Pick your starting location" xalign 0.5 ypos 325
+    text "Pick your starting location" xalign 0.5 ypos 300
 
-    grid len(pb_starting_locations) 1:
+    grid math.ceil(len(pb_starting_locations) / PB_ROWS) PB_ROWS:
         xspacing 10
-        xalign 0.5
-        ypos 450
+        yspacing -75
+        align (0.5, 0.5)
+        yoffset 125
         allow_underfull True
 
         for i, l in pb_starting_locations:
@@ -64,9 +65,9 @@ screen path_builder_starting_location():
                         color "#FFF"
 
     if pb_start_label == "v1_start":
-        text "ACHIEVEMENTS ARE EARNABLE" xalign 0.5 ypos 750
+        text "ACHIEVEMENTS ARE EARNABLE" xalign 0.5 ypos 905
     else:
-        text "ACHIEVEMENTS ARE NOT EARNABLE FROM THIS START" xalign 0.5 ypos 750
+        text "ACHIEVEMENTS ARE NOT EARNABLE FROM THIS START" xalign 0.5 ypos 905
 
     hbox:
         spacing 50
@@ -74,12 +75,12 @@ screen path_builder_starting_location():
         yoffset -50
 
         imagebutton:
-            idle image_path + "/back.webp"
+            idle "path_builder_back_idle"
             action MainMenu(False, False)
 
         imagebutton:
-            idle image_path + "/continue.webp"
-            insensitive Transform(image_path + "/continue.webp", matrixcolor=SaturationMatrix(0))
+            idle "path_builder_continue_idle"
+            insensitive "path_builder_continue_insensitive"
             sensitive (pb_start_label)
             action Show("path_builder_reputation")
 
