@@ -1,17 +1,16 @@
-screen end_screen(support_link):
+screen ep3_end_screen():
     tag end_screen
     modal True
     style_prefix "end_screen"
 
     add "end_screen_background"
 
-    text "College Kings 2: Episode 6 is currently in development":
+    text "College Kings 2: Episodes 4 & 5 \"Moving Out\" is now available on Steam!":
         style "montserrat_extra_bold_56"
         textalign 0.5
         xalign 0.5
         xsize 1220
         ypos 75
-        # action OpenURL("steam://openurl/https://store.steampowered.com/app/2267960/College_Kings_2__Episode_3_Back_To_Basics/")
 
     frame:
         background "end_screen_frame_background"
@@ -23,11 +22,16 @@ screen end_screen(support_link):
             yalign 1.0
             offset (10, -10)
 
-        imagebutton:
-            idle "end_screen_wishlist_now"
-            action OpenURL("steam://openurl/https://store.steampowered.com/app/2267960/College_Kings_2__Episode_3_Back_To_Basics/")
+        button:
+            background "end_screen_action_button"
+            action OpenURL("steam://openurl/https://store.steampowered.com/app/2725540/College_Kings_2__Episodes_4__5_Moving_Out/")
+            xysize (311, 91)
             align (0.5, 1.0)
             yoffset 46
+
+            text "BUY NOW":
+                style "bebas_neue_33"
+                align (0.5, 0.5)
 
     hbox:
         xpos 50
@@ -43,7 +47,7 @@ screen end_screen(support_link):
         imagebutton:
             idle "team_idle"
             hover "team_hover"
-            action Show("team_credits", None, support_link)
+            action Show("team_credits", None, "https://store.steampowered.com/app/2725540/College_Kings_2__Episodes_4__5_Moving_Out/")
             yalign 0.5
 
     hbox:

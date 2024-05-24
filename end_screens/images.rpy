@@ -10,6 +10,7 @@ image team_idle = "screens/end_screens/images/team_idle.webp"
 image team_hover = "screens/end_screens/images/team_hover.webp"
 image end_screen_frame_background = "screens/end_screens/images/end_screen_frame_background.webp"
 image steam_logo = "screens/end_screens/images/steam_logo.webp"
+image end_screen_action_button = "screens/end_screens/images/action_button.png"
 image end_screen_wishlist_now = "screens/end_screens/images/wishlist_now.webp"
 
 image end_screen_background:
