@@ -42,9 +42,9 @@ screen path_builder_extra_settings():
                 spacing 10
 
                 imagebutton:
-                    idle "path_bulder_tick"
-                    hover "path_bulder_ticked"
-                    selected_idle "path_bulder_ticked"
+                    idle "path_builder_tick"
+                    hover "path_builder_ticked"
+                    selected_idle "path_builder_ticked"
                     action actions
 
                 text name ypos -5

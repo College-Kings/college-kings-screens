@@ -36,9 +36,9 @@ screen path_builder_advanced_settings():
                     spacing 20
 
                     imagebutton:
-                        idle "path_bulder_tick"
-                        hover "path_bulder_ticked"
-                        selected_idle "path_bulder_ticked"
+                        idle "path_builder_tick"
+                        hover "path_builder_ticked"
+                        selected_idle "path_builder_ticked"
                         action actions
 
                     text name
@@ -54,9 +54,9 @@ screen path_builder_advanced_settings():
                     spacing 20
 
                     imagebutton:
-                        idle "path_bulder_tick"
-                        hover "path_bulder_ticked"
-                        selected_idle "path_bulder_ticked"
+                        idle "path_builder_tick"
+                        hover "path_builder_ticked"
+                        selected_idle "path_builder_ticked"
                         action actions
 
                     text name:

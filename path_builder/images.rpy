@@ -7,7 +7,7 @@ image path_builder_back_idle = "screens/path_builder/images/back.webp"
 image path_builder_continue_idle = "screens/path_builder/images/continue.webp"
 image path_builder_continue_insensitive = Transform("path_builder_continue_idle", matrixcolor=SaturationMatrix(0))
 
-image path_bulder_tick = "screens/path_builder/images/pb_tick.webp"
+image path_builder_tick = "screens/path_builder/images/pb_tick.webp"
 image path_builder_ticked = "screens/path_builder/images/pb_ticked.webp"
 
 image path_builder_step_1 = "screens/path_builder/images/path_builder_step_1.webp"
