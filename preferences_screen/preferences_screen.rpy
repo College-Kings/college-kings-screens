@@ -356,7 +356,7 @@ screen preferences():
 
 
     vpgrid:
-        rows 2
+        cols 2
         pos (987, 550)
         spacing 20
         allow_underfull True
@@ -398,6 +398,15 @@ screen preferences():
             padding (40, 25)
 
             text "Connect Lovense" align (0.5, 0.5)
+
+        button:
+            idle_background "blue_button_idle"
+            hover_background "blue_button_hover"
+            selected_background "blue_button_hover"
+            action Show("clear_persistent")
+            padding (40, 25)
+
+            text "Clear Persistent Data" align (0.5, 0.5)
 
         if _in_replay:
             button:

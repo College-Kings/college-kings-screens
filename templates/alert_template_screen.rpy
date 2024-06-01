@@ -7,14 +7,15 @@ screen alert_template(message):
         align (0.5, 0.5)
         minimum (758, 363)
         background "alert_background"
+        padding (50, 25)
 
         vbox:
             align (0.5, 0.5)
             spacing 45
 
             text "[message!t]":
+                xsize 700
                 xalign 0.5
-                xsize 650
 
             hbox:
                 xalign 0.5
