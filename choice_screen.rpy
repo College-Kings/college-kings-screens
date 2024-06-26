@@ -63,7 +63,7 @@ screen choice(items, seconds=3, fail_label=None):
                                             $ positives.append("{{color={}}}[[+{}]".format(interpolate_color_to_white("#00ff00", state), arg))
                                         elif state < 0: 
                                             $ negatives.append("{{color={}}}[[-{}]".format(interpolate_color_to_white("#ff0000", state * -1), arg))
-                                        else:
+                                        elif state == 0:
                                             $ neutrals.append("{{color=#fff}}[[{}]".format(arg))
 
                                     text " ".join(("".join(positives), "".join(neutrals), "".join(negatives))) yalign 0.5
