@@ -231,11 +231,11 @@ screen preferences():
 
                         text "Off" align (0.5, 0.5)
 
-            # DIAGNOSTIC DATA
+            # WALKTHROUGH
             hbox:
                 xfill True
 
-                text "Diagnostic Data Collection" yalign 0.5
+                text "Walkthrough" yalign 0.5
 
                 hbox:
                     xalign 1.0
@@ -245,9 +245,7 @@ screen preferences():
                         idle_background "blue_button_idle"
                         hover_background "blue_button_hover"
                         selected_background "blue_button_hover"
-                        insensitive_background Transform("blue_button_idle", matrixcolor=SaturationMatrix(0))
-                        action NullAction()
-                        sensitive False
+                        action SetVariable("walkthrough", True)
                         xysize (137, 61)
 
                         text "On" align (0.5, 0.5)
@@ -256,17 +254,16 @@ screen preferences():
                         idle_background "blue_button_idle"
                         hover_background "blue_button_hover"
                         selected_background "blue_button_hover"
-                        action NullAction()
-                        selected True
+                        action SetVariable("walkthrough", False)
                         xysize (137, 61)
 
                         text "Off" align (0.5, 0.5)
 
-            # MARKETING DATA
+            # HAREM MODE
             hbox:
                 xfill True
 
-                text "Marketing Data Collection" yalign 0.5
+                text "Harem Mode" yalign 0.5
 
                 hbox:
                     xalign 1.0
@@ -276,9 +273,7 @@ screen preferences():
                         idle_background "blue_button_idle"
                         hover_background "blue_button_hover"
                         selected_background "blue_button_hover"
-                        insensitive_background Transform("blue_button_idle", matrixcolor=SaturationMatrix(0))
-                        action NullAction()
-                        sensitive False
+                        action SetVariable("harem_mode", True)
                         xysize (137, 61)
 
                         text "On" align (0.5, 0.5)
@@ -287,11 +282,72 @@ screen preferences():
                         idle_background "blue_button_idle"
                         hover_background "blue_button_hover"
                         selected_background "blue_button_hover"
-                        action NullAction()
-                        selected True
+                        action SetVariable("harem_mode", False)
                         xysize (137, 61)
 
                         text "Off" align (0.5, 0.5)
+
+            # # DIAGNOSTIC DATA
+            # hbox:
+            #     xfill True
+
+            #     text "Diagnostic Data Collection" yalign 0.5
+
+            #     hbox:
+            #         xalign 1.0
+            #         spacing 5
+
+            #         button:
+            #             idle_background "blue_button_idle"
+            #             hover_background "blue_button_hover"
+            #             selected_background "blue_button_hover"
+            #             insensitive_background Transform("blue_button_idle", matrixcolor=SaturationMatrix(0))
+            #             action NullAction()
+            #             sensitive False
+            #             xysize (137, 61)
+
+            #             text "On" align (0.5, 0.5)
+
+            #         button:
+            #             idle_background "blue_button_idle"
+            #             hover_background "blue_button_hover"
+            #             selected_background "blue_button_hover"
+            #             action NullAction()
+            #             selected True
+            #             xysize (137, 61)
+
+            #             text "Off" align (0.5, 0.5)
+
+            # # MARKETING DATA
+            # hbox:
+            #     xfill True
+
+            #     text "Marketing Data Collection" yalign 0.5
+
+            #     hbox:
+            #         xalign 1.0
+            #         spacing 5
+
+            #         button:
+            #             idle_background "blue_button_idle"
+            #             hover_background "blue_button_hover"
+            #             selected_background "blue_button_hover"
+            #             insensitive_background Transform("blue_button_idle", matrixcolor=SaturationMatrix(0))
+            #             action NullAction()
+            #             sensitive False
+            #             xysize (137, 61)
+
+            #             text "On" align (0.5, 0.5)
+
+            #         button:
+            #             idle_background "blue_button_idle"
+            #             hover_background "blue_button_hover"
+            #             selected_background "blue_button_hover"
+            #             action NullAction()
+            #             selected True
+            #             xysize (137, 61)
+
+            #             text "Off" align (0.5, 0.5)
 
 
     frame:
