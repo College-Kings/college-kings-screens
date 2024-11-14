@@ -41,9 +41,9 @@ screen choice(items, seconds=3, fail_label=None):
                             padding (30, 35)
                             minimum (550, 131)
 
-                            hbox:
+                            vbox:
                                 align (0.5, 0.5)
-                                spacing 10
+                                spacing -5
 
                                 if walkthrough:
                                     $ positives = []
@@ -52,11 +52,11 @@ screen choice(items, seconds=3, fail_label=None):
                                     $ arg1 = item.args[0] if item.args else None
 
                                     if arg1 is True:
-                                        text "{color=#0f0}[item.caption!uit]" yalign 0.5
+                                        text "{color=#0f0}[item.caption!uit]" xalign 0.5
                                     elif arg1 is False:
-                                        text "{color=#f00}[item.caption!uit]" yalign 0.5
+                                        text "{color=#f00}[item.caption!uit]" xalign 0.5
                                     else:
-                                        text "[item.caption!uit]" yalign 0.5
+                                        text "[item.caption!uit]" xalign 0.5
 
                                     for arg, state in item.kwargs.items():
                                         if state > 0:
@@ -66,10 +66,11 @@ screen choice(items, seconds=3, fail_label=None):
                                         elif state == 0:
                                             $ neutrals.append("{{color=#fff}}[[{}]".format(arg))
 
-                                    text " ".join(("".join(positives), "".join(neutrals), "".join(negatives))) yalign 0.5
+                                    if positives or neutrals or negatives:
+                                        text " ".join(("".join(positives), "".join(neutrals), "".join(negatives))) xalign 0.5 size 18
 
                                 else:
-                                    text "[item.caption!uit]" yalign 0.5
+                                    text "[item.caption!uit]" xalign 0.5
 
     if fail_label is not None or fail_action:
         bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve
