@@ -259,33 +259,33 @@ screen preferences():
 
                         text "Off" align (0.5, 0.5)
 
-            # HAREM MODE
-            hbox:
-                xfill True
+            # # HAREM MODE
+            # hbox:
+            #     xfill True
 
-                text "Harem Mode" yalign 0.5
+            #     text "Harem Mode" yalign 0.5
 
-                hbox:
-                    xalign 1.0
-                    spacing 5
+            #     hbox:
+            #         xalign 1.0
+            #         spacing 5
 
-                    button:
-                        idle_background "blue_button_idle"
-                        hover_background "blue_button_hover"
-                        selected_background "blue_button_hover"
-                        action SetVariable("harem_mode", True)
-                        xysize (137, 61)
+            #         button:
+            #             idle_background "blue_button_idle"
+            #             hover_background "blue_button_hover"
+            #             selected_background "blue_button_hover"
+            #             action SetVariable("harem_mode", True)
+            #             xysize (137, 61)
 
-                        text "On" align (0.5, 0.5)
+            #             text "On" align (0.5, 0.5)
 
-                    button:
-                        idle_background "blue_button_idle"
-                        hover_background "blue_button_hover"
-                        selected_background "blue_button_hover"
-                        action SetVariable("harem_mode", False)
-                        xysize (137, 61)
+            #         button:
+            #             idle_background "blue_button_idle"
+            #             hover_background "blue_button_hover"
+            #             selected_background "blue_button_hover"
+            #             action SetVariable("harem_mode", False)
+            #             xysize (137, 61)
 
-                        text "Off" align (0.5, 0.5)
+            #             text "Off" align (0.5, 0.5)
 
             # # DIAGNOSTIC DATA
             # hbox:
