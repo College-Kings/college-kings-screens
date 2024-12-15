@@ -46,3 +46,33 @@ style say_window is window:
     xfill True
     yalign 1.0
     ysize 278
+
+# screen multiple_say(who, what, multiple):
+#         style_prefix "say"
+
+#     window:
+#         if who is not None:
+
+#             window:
+#                 xpos 360
+#                 xanchor 0.0
+#                 padding (5, 5, 5, 5)
+
+#                 text who id "who":
+#                     size 45
+#                     font "fonts/OpenSans-Bold.ttf"
+
+#         text what id "what":
+#             pos (402, 75)
+#             xsize 1116
+#             size 30
+#             font "fonts/OpenSans-Bold.ttf"
+
+
+#     ## If there's a side image, display it above the text. Do not display on the
+#     ## phone variant - there's no room.
+#     if not renpy.variant("small"):
+#         add SideImage() yalign 1.0
+
+#     if config_debug:
+#         timer 0.2 repeat True action SetField(config, "skipping", "slow")
