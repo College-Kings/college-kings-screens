@@ -441,7 +441,7 @@ screen preferences():
             hover_background "blue_button_hover"
             selected_background "blue_button_hover"
             insensitive_background Transform("blue_button_idle", matrixcolor=SaturationMatrix(0))
-            action Call("change_name")
+            action Call("name_change")
             padding (50, 25)
 
             text "Change Name" align (0.5, 0.5)
@@ -473,3 +473,8 @@ screen preferences():
                 padding (50, 25)
 
                 text "End Replay" align (0.5, 0.5)
+
+label name_change():
+    scene black
+    $ mc.name_input()
+    return
