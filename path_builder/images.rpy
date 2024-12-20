@@ -12,3 +12,10 @@ image path_builder_ticked = "screens/path_builder/images/pb_ticked.webp"
 
 image path_builder_step_1 = "screens/path_builder/images/path_builder_step_1.webp"
 image path_builder_step_5 = "screens/path_builder/images/path_builder_step_5.webp"
+
+image path_builder_episode_1_start = "screens/path_builder/images/episode_1_start.webp"
+image path_builder_episode_2_start = "screens/path_builder/images/episode_2_start.webp"
+image path_builder_episode_3_start = "screens/path_builder/images/episode_3_start.webp"
+image path_builder_episode_4_start = "screens/path_builder/images/episode_4_start.webp"
+image path_builder_episode_5_start = "screens/path_builder/images/episode_5_start.webp"
+image path_builder_episode_6_start = "screens/path_builder/images/episode_6_start.webp"
