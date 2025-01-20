@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+from typing import Optional
 from renpy.display.displayable import Displayable
 
 from renpy.display.transform import Transform
@@ -10,28 +10,23 @@ init python:
 """
 
 
-@dataclass
 class SceneGallery:
-    _title: str
-    idle_image: str
-    label: str
-    scope: dict[str, object] = field(default_factory=dict)
+    def __init__(
+        self,
+        title: str,
+        image: str,
+        label: str,
+        scope: Optional[dict[str, object]] = None,
+    ) -> None:
+        self._title: str = title
+        self.idle_image: "Displayable" = Transform(image, size=(362, 230), pos=(6, 16))
+        self.locked_image: "Displayable" = Transform(self.idle_image, blur=50)
+        self.label: str = label
+        self.scope: dict[str, object] = scope or {}
 
     @property
     def title(self) -> str:
         return self._title.upper()
-
-    @property
-    def locked_image(self) -> "Displayable":
-        try:
-            return self._locked_image
-        except AttributeError:
-            self.locked_image = Transform(self.idle_image, blur=50)
-        return self._locked_image
-
-    @locked_image.setter
-    def locked_image(self, value: "Displayable") -> None:
-        self._locked_image: Displayable = value
 
 
 def update_scope(new_scope: dict[str, object]) -> dict[str, object]:
