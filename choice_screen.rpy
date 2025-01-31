@@ -53,7 +53,7 @@ screen choice(items, seconds=3, fail_label=None):
 
                                     if arg1 is True:
                                         text "{color=#0f0}[item.caption!uit]" xalign 0.5
-                                    elif arg1 is False:
+                                    elif arg1 is False or item.kwargs.get("fail", False):
                                         text "{color=#f00}[item.caption!uit]" xalign 0.5
                                     else:
                                         text "[item.caption!uit]" xalign 0.5
