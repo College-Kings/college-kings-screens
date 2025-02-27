@@ -26,7 +26,7 @@ screen main_menu():
     imagebutton:
         idle "main_menu_discord_idle"
         hover "main_menu_discord_hover"
-        action OpenURL("https://discord.gg/collegekings")
+        action OpenURL("https://discord.gg/undergradsteve")
         xalign 1.0
         xoffset -35
         ypos 35

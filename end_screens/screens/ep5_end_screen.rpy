@@ -39,7 +39,7 @@ screen ep5_end_screen():
 
         imagebutton:
             idle "discord_idle"
-            action OpenURL("https://discord.gg/collegekings")
+            action OpenURL("https://discord.gg/undergradsteve")
 
     on "show" action SetVariable("quick_menu", False)
     on "hide" action SetVariable("quick_menu", True)
