@@ -54,14 +54,10 @@ screen team_credits(support_link=None):
     )
 
     default qa_team = (
-        "{b}Dux90{/b} - Quality Assurance",
+        "{b}Browwna{/b} - Quality Assurance",
         "{b}Ozzy{/b} - Quality Assurance",
         "{b}Irish{/b} - Quality Assurance",
-        "{b}Messy{/b} - Quality Assurance",
-        "{b}Rev{/b} - Quality Assurance",
-        "{b}Sanjinn{/b} - Quality Assurance",
-        "{b}Skepticalz{/b} - Quality Assurance",
-        "{b}Zack{/b} - Quality Assurance",
+        "{b}Messy{/b} - Quality Assurance"
     )
 
     default ui_ux_team = ()
@@ -69,9 +65,9 @@ screen team_credits(support_link=None):
     default live_operations_team = (
         "{b}Irish{/b} - Community Administrator & Lead Support Team",        
         "{b}Asp{/b} - Community Moderator",
-        "{b}Lucass{/b} - Community Moderator",
+        "{b}MrHorseman2997{/b} - Community Moderator",
         "{b}Onni{/b} - Community Moderator",
-        "{b}Oskin{/b} - Community Moderator",
+        "{b}Kaito{/b} - Community Moderator",
         "{b}Messy{/b} - Game Support"
     )
 
