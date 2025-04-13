@@ -1259,6 +1259,29 @@ screen patreon_credits(support_link):
             text "Legends Of Flarrow"
             text "gazman"
 
+            null height 50
+
+            text "Special Thanks" bold True
+
+            null height 25
+
+            text "KingLui"
+            text "OscarSix"
+            text "Pete"
+            text "Ben Davis"
+            text "Nicki5617"
+            text "NicoMS"
+            text "Mugi"
+            text "TheFatLebowski"
+            text "Francois"
+            text "RogueRoach"
+            text "Zoneh69"
+            text "Filip Jankovic"
+            text "Mozzart"
+            text "Spacestorm"
+            text "Smudger"
+            text "StefanGaming"
+
     add "scene_gallery_bar_base" pos (1200, 50) xysize (27, 700)
     vbar:
         pos (1205, 55)
