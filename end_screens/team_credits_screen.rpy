@@ -9,26 +9,16 @@ screen team_credits(support_link=None):
 
     default management = (
         "{b}UndergradSteve{/b} - Game Creator",
-        "{b}KingLui{/b} - Operations Manager",
-        "{b}OscarSix{/b} - Chief Technology Officer"
+        "{b}Irish{/b} - Operations Officer"
     )
 
-    default team_leads = (
-        "{b}Messy17{/b} - Lead Transcriber & Renderer & Gameplay Engineer",
-        "{b}Mozzart{/b} - Art Director",
-        "{b}Spacestorm{/b} - QA Manager",
-    )
+    default team_leads = ()
 
     default art_team = (
-        "{b}Mugi{/b} - Animator",
-        "{b}TheFatLebowski{/b} - Animator",
-        "{b}Francois{/b} - Renderer",
-        "{b}Freja{/b} - Renderer",
-        "{b}RogueRoach{/b} - Renderer",
-        "{b}SexFM{/b} - Renderer",
-        "{b}Stefan{/b} - Renderer & Photoshopper",
-        "{b}Zoneh69{/b} - Renderer",
-        "{b}Filip Jankovic{/b} - Photoshopper & UI/UX Designer",
+        "{b}Stefan{/b} - Lead Artist, Game Renderer, Photoshopper",
+        "{b}SexFM{/b} - Animator, Gamer Renderer",
+        "{b}Messy{/b} - Game Renderer, Marketing & Patreon Renderer",
+        "{b}Takeover Rug{/b} - Game Renderer, Marketing & Patreon Renderer"        
     )
 
     default audio_team = ()
@@ -39,8 +29,7 @@ screen team_credits(support_link=None):
 
     default engineering_team = (
         "{b}Irish{/b} - Transcriber & Gameplay Engineer",
-        "{b}Smudger{/b} - Transcriber",
-        "{b}StefanGaming{/b} - Gameplay Engineer",
+        "{b}Messy{/b} - Transcriber, Tools Developer, Gameplay Engineer"
     )
 
     default game_design_team = ()
@@ -54,9 +43,7 @@ screen team_credits(support_link=None):
     default localization_team = ()
 
     default narrative_team = (
-        "{b}Pete{/b} - Lead Writer",
         "{b}Ozzy{/b} - Writer",
-        "{b}Nicki5617{/b} - Editor",
     )
 
     default production_team = ()
@@ -64,12 +51,13 @@ screen team_credits(support_link=None):
     default marketing_team = (
         "{b}Adam{/b} - Marketing Manager",
         "{b}Adrien{/b} - Marketing",
-        "{b}NicoMS{/b} - Marketing",
     )
 
     default qa_team = (
         "{b}Dux90{/b} - Quality Assurance",
-        "{b}EilDownTown{/b} - Quality Assurance",
+        "{b}Ozzy{/b} - Quality Assurance",
+        "{b}Irish{/b} - Quality Assurance",
+        "{b}Messy{/b} - Quality Assurance",
         "{b}Rev{/b} - Quality Assurance",
         "{b}Sanjinn{/b} - Quality Assurance",
         "{b}Skepticalz{/b} - Quality Assurance",
@@ -79,11 +67,12 @@ screen team_credits(support_link=None):
     default ui_ux_team = ()
 
     default live_operations_team = (
-        "{b}Chaser{/b} - Community Administrator & Lead Support Team",
+        "{b}Irish{/b} - Community Administrator & Lead Support Team",        
         "{b}Asp{/b} - Community Moderator",
         "{b}Lucass{/b} - Community Moderator",
         "{b}Onni{/b} - Community Moderator",
         "{b}Oskin{/b} - Community Moderator",
+        "{b}Messy{/b} - Game Support"
     )
 
     default teams = (
