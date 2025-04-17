@@ -6,7 +6,7 @@ screen path_builder_girls():
 
     default image_path = "screens/path_builder/images"
     default selected_rep = None
-
+    
     add "path_builder_background"
     add image_path + "/path_builder_box_background.webp" align (0.5, 0.5)
 
@@ -40,8 +40,20 @@ screen path_builder_girls():
         align (0.5, 0.5)
         yoffset 75
 
+        
+
         for girl_obj, relationships in pb_relationships.items():
             python:
+                if(girl_obj.name.lower() == "riley"):
+                    if(pb_start_label == "ep6_start"):
+
+                        if not Relationship.GIRLFRIEND in relationships:
+                            relationships = relationships + (Relationship.GIRLFRIEND,)
+                        else:
+                            relationship = tuple(r for r in relationships if r != Relationship.GIRLFRIEND)
+                    else:
+                        relationship = tuple(r for r in relationships if r != Relationship.GIRLFRIEND)
+                
                 required_frat = girl_obj.frat_requirement
                 preferred_reputation = girl_obj.preferred_reputation
                 relationship = CharacterService.get_relationship(girl_obj)
