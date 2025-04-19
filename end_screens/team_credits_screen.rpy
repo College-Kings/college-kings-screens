@@ -9,7 +9,8 @@ screen team_credits(support_link=None):
 
     default management = (
         "{b}UndergradSteve{/b} - Game Creator",
-        "{b}Irish{/b} - Cheif Operating Officer"
+        "{b}Irish{/b} - Cheif Operating Officer",
+        "{b}Adam{/b} - Cheif Marketing Manager",
     )
 
     default team_leads = ()
@@ -50,7 +51,6 @@ screen team_credits(support_link=None):
     default production_team = ()
 
     default marketing_team = (
-        "{b}Adam{/b} - Cheif Marketing Manager",
         "{b}Adrien{/b} - Marketing",
     )
 
