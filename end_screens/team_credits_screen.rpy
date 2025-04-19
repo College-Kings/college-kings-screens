@@ -50,7 +50,7 @@ screen team_credits(support_link=None):
     default production_team = ()
 
     default marketing_team = (
-        "{b}Adam{/b} - Marketing Manager",
+        "{b}Adam{/b} - Cheif Marketing Manager",
         "{b}Adrien{/b} - Marketing",
     )
 
