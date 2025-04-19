@@ -9,7 +9,7 @@ screen team_credits(support_link=None):
 
     default management = (
         "{b}UndergradSteve{/b} - Game Creator",
-        "{b}Irish{/b} - Operations Officer"
+        "{b}Irish{/b} - Cheif Operating Officer"
     )
 
     default team_leads = ()
@@ -17,6 +17,7 @@ screen team_credits(support_link=None):
     default art_team = (
         "{b}Stefan{/b} - Lead Artist, Game Renderer, Photoshopper",
         "{b}SexFM{/b} - Animator, Gamer Renderer",
+        "{b}Freja{/b} - Animator",
         "{b}Messy{/b} - Game Renderer, Marketing & Patreon Renderer",
         "{b}Takeover Rug{/b} - Game Renderer, Marketing & Patreon Renderer"        
     )
